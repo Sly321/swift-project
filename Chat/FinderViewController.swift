@@ -3,9 +3,14 @@ import UIKit
 import MultipeerConnectivity
 import Foundation
 
-class FinderViewController: UIViewController, MPCBrowserDelegate {
+class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
     
     let aD = UIApplication.sharedApplication().delegate as! AppDelegate
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var imageView = UIImageView()
+    let image = UIImage(named:"dart")
     
     override func viewDidLoad() {
         super.viewDidLoad()
