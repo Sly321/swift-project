@@ -1,8 +1,8 @@
 
 import UIKit
 
-class AuthenticationViewController: UIViewController {
-    
+class AuthenticationViewController: UIViewController
+{
     let aD = UIApplication.sharedApplication().delegate as! AppDelegate
     var user: Array<Dictionary<String, AnyObject>>!
     
@@ -10,11 +10,13 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet var btn: UIButton!
     @IBOutlet var infoText: UILabel!
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool)
+    {
         executeAuthentication()
     }
     
-    private func executeAuthentication() {
+    private func executeAuthentication()
+    {
         user = aD.data.get("User", predicat: aD.uuid)
         
         switch user.count {
@@ -38,10 +40,12 @@ class AuthenticationViewController: UIViewController {
     }
     
     @IBAction func register(sender: UIButton) {
-        if (count(textField.text) < 4) {
+        if (count(textField.text) < 4)
+        {
             infoText.text = "Name zu kurz. Min 4 Zeichen."
-            
-        } else {
+        }
+        else
+        {
             aD.data.insert("User", id: aD.uuid, data: ["id": aD.uuid, "name": textField.text])
             aD.name = textField.text
             executeAuthentication()

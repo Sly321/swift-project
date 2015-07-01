@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,62 +18,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rI9-6f-bQG">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
+                                <rect key="frame" x="241" y="112" width="118" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="65" width="233" height="30"/>
-                                </variation>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQk-o4-alv">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="ok">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zh-MZP">
+                                <rect key="frame" x="241" y="279" width="118" height="30"/>
+                                <state key="normal" title="Apply">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="131" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="register:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aGg-Tt-jbu"/>
-                                </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryd-wF-ceC">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-ei-l4k">
+                                <rect key="frame" x="214" y="161" width="173" height="72"/>
+                                <string key="text">Choose you Username, this is 
+your shown name in the Chat. You only need to set this name once. After this it will be saved for later sessions.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.12190792758865734" green="0.85726404671717171" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="54" y="186" width="227" height="21"/>
-                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-Ms-ctS">
+                                <rect key="frame" x="241" y="86" width="118" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CyS-l3-bke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="EYC-zh-MZP" secondAttribute="trailing" constant="225" id="3D5-Cf-yyN"/>
+                            <constraint firstItem="uUQ-I4-eM5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="271" id="5y8-lg-s3b"/>
+                            <constraint firstItem="uUQ-I4-eM5" firstAttribute="top" secondItem="2cD-Ms-ctS" secondAttribute="bottom" constant="5" id="7T4-x3-Gd3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uAD-ei-l4k" secondAttribute="trailing" constant="197" id="HJe-CD-1N2"/>
+                            <constraint firstItem="uUQ-I4-eM5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="225" id="La4-Nf-P2i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uUQ-I4-eM5" secondAttribute="trailing" constant="225" id="NV4-kb-6Rv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uUQ-I4-eM5" secondAttribute="trailing" constant="271" id="PVD-bD-E0J"/>
+                            <constraint firstItem="uAD-ei-l4k" firstAttribute="top" secondItem="uUQ-I4-eM5" secondAttribute="bottom" constant="15" id="Qn0-b6-idJ"/>
+                            <constraint firstItem="EYC-zh-MZP" firstAttribute="top" secondItem="uAD-ei-l4k" secondAttribute="bottom" constant="46" id="Smz-3X-KjJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EYC-zh-MZP" secondAttribute="trailing" constant="264" id="Vw9-FT-P3m"/>
+                            <constraint firstItem="uAD-ei-l4k" firstAttribute="top" secondItem="uUQ-I4-eM5" secondAttribute="bottom" constant="15" id="aMS-PY-L2Z"/>
+                            <constraint firstItem="2cD-Ms-ctS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="bpy-lp-Z7Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2cD-Ms-ctS" secondAttribute="trailing" constant="225" id="cWO-55-0UH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uUQ-I4-eM5" secondAttribute="trailing" constant="271" id="eKt-tp-jnW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EYC-zh-MZP" secondAttribute="bottom" constant="291" id="fGD-dc-QVN"/>
+                            <constraint firstItem="uAD-ei-l4k" firstAttribute="top" secondItem="uUQ-I4-eM5" secondAttribute="bottom" constant="15" id="fyB-cR-b90"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uUQ-I4-eM5" secondAttribute="trailing" constant="271" id="l6a-gV-Scz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EYC-zh-MZP" secondAttribute="trailing" constant="255" id="py7-Z1-1HP"/>
+                            <constraint firstItem="uAD-ei-l4k" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="198" id="qef-Df-Qjd"/>
+                            <constraint firstItem="EYC-zh-MZP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="225" id="r9n-Px-ZAY"/>
+                            <constraint firstItem="2cD-Ms-ctS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="225" id="rmy-3h-FC7"/>
+                            <constraint firstItem="uUQ-I4-eM5" firstAttribute="top" secondItem="2cD-Ms-ctS" secondAttribute="bottom" constant="5" id="rvJ-ll-T7a"/>
+                            <constraint firstItem="uAD-ei-l4k" firstAttribute="top" secondItem="uUQ-I4-eM5" secondAttribute="bottom" constant="15" id="vYq-RG-vz9"/>
+                            <constraint firstItem="EYC-zh-MZP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="264" id="w9d-0g-M4W"/>
+                            <constraint firstItem="uUQ-I4-eM5" firstAttribute="top" secondItem="2cD-Ms-ctS" secondAttribute="bottom" constant="5" id="xDj-3e-qws"/>
+                        </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="rI9-6f-bQG"/>
-                                <exclude reference="NQk-o4-alv"/>
-                                <exclude reference="ryd-wF-ceC"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="rI9-6f-bQG"/>
-                                <include reference="NQk-o4-alv"/>
-                                <include reference="ryd-wF-ceC"/>
+                            <mask key="constraints">
+                                <exclude reference="5y8-lg-s3b"/>
+                                <exclude reference="PVD-bD-E0J"/>
+                                <exclude reference="eKt-tp-jnW"/>
+                                <exclude reference="l6a-gV-Scz"/>
+                                <exclude reference="Vw9-FT-P3m"/>
+                                <exclude reference="py7-Z1-1HP"/>
+                                <exclude reference="w9d-0g-M4W"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="btn" destination="NQk-o4-alv" id="vks-3z-DTS"/>
-                        <outlet property="infoText" destination="ryd-wF-ceC" id="pSa-c6-rOZ"/>
-                        <outlet property="textField" destination="rI9-6f-bQG" id="PY9-ZN-TNs"/>
+                        <outlet property="btn" destination="EYC-zh-MZP" id="A4a-u9-mc8"/>
+                        <outlet property="infoText" destination="2cD-Ms-ctS" id="3f5-DK-nrB"/>
+                        <outlet property="textField" destination="uUQ-I4-eM5" id="JyE-He-7hY"/>
                         <segue destination="iqr-YK-grR" kind="show" identifier="authintication" id="tm4-r7-BJG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.5" y="304"/>
+            <point key="canvasLocation" x="109" y="304"/>
         </scene>
         <!--Finder-->
         <scene sceneID="k0d-mo-gfL">
@@ -89,7 +111,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Finder" id="EFV-qS-fru"/>
+                    <tabBarItem key="tabBarItem" title="Finder" image="img_finder_32x32.png" id="EFV-qS-fru">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soV-VM-439" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +123,9 @@
         <scene sceneID="Y5u-ga-pbx">
             <objects>
                 <navigationController title="Chat Navogation Controller" id="jrW-Ih-Adx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" id="d0R-nT-Ke4"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="img_chat_32x32.png" id="d0R-nT-Ke4">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXa-6G-C1W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -196,7 +222,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="PqJ-dh-5Fu"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="img_gear_32x32.png" id="PqJ-dh-5Fu">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jX-Sf-jH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,7 +234,9 @@
         <scene sceneID="br6-xA-FHV">
             <objects>
                 <navigationController title="Contacts Navigation Controller" id="5cQ-Ch-YV1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contacts" id="OdX-tF-0TA"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="img_contacts_32x32.png" id="OdX-tF-0TA">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C7o-Hy-Xtp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -460,4 +490,10 @@
             <point key="canvasLocation" x="892.5" y="304"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img_chat_32x32.png" width="32" height="32"/>
+        <image name="img_contacts_32x32.png" width="32" height="32"/>
+        <image name="img_finder_32x32.png" width="32" height="32"/>
+        <image name="img_gear_32x32.png" width="32" height="32"/>
+    </resources>
 </document>
