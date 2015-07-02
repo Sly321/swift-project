@@ -8,6 +8,8 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet var textField: UITextField!
     @IBOutlet var btn: UIButton!
     @IBOutlet var infoText: UILabel!
+    @IBOutlet weak var UserLabel: UILabel!
+    @IBOutlet weak var InfoLabel: UILabel!
     
     override func viewDidAppear(animated: Bool) {
         textField.returnKeyType = UIReturnKeyType.Send
@@ -22,6 +24,8 @@ class AuthenticationViewController: UIViewController {
             textField.hidden = false
             btn.hidden = false
             infoText.hidden = false
+            UserLabel.hidden = false
+            InfoLabel.hidden = false
             break
             
         case 1:

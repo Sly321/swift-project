@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zh-MZP">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zh-MZP">
                                 <rect key="frame" x="280" y="335" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CQ6-2X-qFT">
@@ -48,14 +48,14 @@
                                     <action selector="register:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oiY-2v-WGT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-Ms-ctS">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-Ms-ctS">
                                 <rect key="frame" x="300" y="227" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
                                 <rect key="frame" x="200" y="185" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TLj-mI-c90">
@@ -79,14 +79,14 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1l-cZ-HaX">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1l-cZ-HaX">
                                 <rect key="frame" x="261" y="160" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-ei-l4k">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-ei-l4k">
                                 <rect key="frame" x="200" y="230" width="200" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="HfU-Ks-PA1"/>
@@ -136,6 +136,8 @@ your shown name in the Chat. You only need to set this name once.</string>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="InfoLabel" destination="uAD-ei-l4k" id="HBe-g3-suS"/>
+                        <outlet property="UserLabel" destination="I1l-cZ-HaX" id="ufp-55-SKI"/>
                         <outlet property="btn" destination="EYC-zh-MZP" id="A4a-u9-mc8"/>
                         <outlet property="infoText" destination="2cD-Ms-ctS" id="3f5-DK-nrB"/>
                         <outlet property="textField" destination="uUQ-I4-eM5" id="JyE-He-7hY"/>
@@ -508,18 +510,18 @@ your shown name in the Chat. You only need to set this name once.</string>
                                 <exclude reference="25y-9x-ZnO"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HN3-2A-1Rj"/>
-                                <exclude reference="hsu-Ou-UdZ"/>
-                                <exclude reference="rfw-GN-HXI"/>
+                                <exclude reference="1ew-dL-I6Y"/>
+                                <exclude reference="eUP-gS-Oew"/>
+                                <exclude reference="eud-pn-b5c"/>
                                 <exclude reference="Dbh-0C-oW2"/>
                                 <exclude reference="QJC-kg-F73"/>
                                 <exclude reference="hW3-DJ-c77"/>
                                 <exclude reference="hli-31-5qp"/>
-                                <exclude reference="1ew-dL-I6Y"/>
-                                <exclude reference="eUP-gS-Oew"/>
-                                <exclude reference="eud-pn-b5c"/>
                                 <exclude reference="CxO-LC-KCN"/>
                                 <exclude reference="lNQ-Od-0Sw"/>
+                                <exclude reference="HN3-2A-1Rj"/>
+                                <exclude reference="hsu-Ou-UdZ"/>
+                                <exclude reference="rfw-GN-HXI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -529,18 +531,18 @@ your shown name in the Chat. You only need to set this name once.</string>
                                 <include reference="25y-9x-ZnO"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HN3-2A-1Rj"/>
-                                <include reference="hsu-Ou-UdZ"/>
-                                <include reference="rfw-GN-HXI"/>
+                                <include reference="1ew-dL-I6Y"/>
+                                <include reference="eUP-gS-Oew"/>
+                                <include reference="eud-pn-b5c"/>
                                 <include reference="Dbh-0C-oW2"/>
                                 <include reference="QJC-kg-F73"/>
                                 <include reference="hW3-DJ-c77"/>
                                 <include reference="hli-31-5qp"/>
-                                <include reference="1ew-dL-I6Y"/>
-                                <include reference="eUP-gS-Oew"/>
-                                <include reference="eud-pn-b5c"/>
                                 <include reference="CxO-LC-KCN"/>
                                 <include reference="lNQ-Od-0Sw"/>
+                                <include reference="HN3-2A-1Rj"/>
+                                <include reference="hsu-Ou-UdZ"/>
+                                <include reference="rfw-GN-HXI"/>
                             </mask>
                         </variation>
                     </view>
