@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zh-MZP">
-                                <rect key="frame" x="241" y="279" width="118" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zh-MZP">
+                                <rect key="frame" x="280" y="335" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CQ6-2X-qFT">
                                         <variation key="widthClass=compact" constant="100"/>
@@ -48,46 +48,21 @@
                                     <action selector="register:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oiY-2v-WGT"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-ei-l4k">
-                                <rect key="frame" x="214" y="161" width="173" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="UMh-hw-372">
-                                        <variation key="widthClass=compact" constant="60"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="221" id="WBT-ew-o4r"/>
-                                </constraints>
-                                <string key="text">Choose you Username, this is 
-your shown name in the Chat. You only need to set this name once. After this it will be saved for later sessions.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.12190792758865734" green="0.85726404671717171" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UMh-hw-372"/>
-                                        <exclude reference="WBT-ew-o4r"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="UMh-hw-372"/>
-                                        <include reference="WBT-ew-o4r"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-Ms-ctS">
-                                <rect key="frame" x="241" y="86" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-Ms-ctS">
+                                <rect key="frame" x="300" y="227" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
-                                <rect key="frame" x="241" y="112" width="118" height="34"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
+                                <rect key="frame" x="200" y="185" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TLj-mI-c90">
                                         <variation key="widthClass=compact" constant="40"/>
                                     </constraint>
                                     <constraint firstAttribute="width" constant="221" id="UDn-Bx-mfK"/>
+                                    <constraint firstAttribute="width" constant="200" id="Wg0-F3-gXn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -104,43 +79,62 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     </mask>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1l-cZ-HaX">
+                                <rect key="frame" x="261" y="160" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-ei-l4k">
+                                <rect key="frame" x="200" y="230" width="200" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HfU-Ks-PA1"/>
+                                    <constraint firstAttribute="width" constant="200" id="TEJ-O8-2eK"/>
+                                    <constraint firstAttribute="height" constant="98" id="UMh-hw-372">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="221" id="WBT-ew-o4r"/>
+                                    <constraint firstAttribute="height" constant="90" id="uai-0b-6Io"/>
+                                    <constraint firstAttribute="height" constant="8" id="uyG-mN-g6j"/>
+                                </constraints>
+                                <string key="text">Choose you name, this is 
+your shown name in the Chat. You only need to set this name once.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.72157118060000003" blue="0.65648703369999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HfU-Ks-PA1"/>
+                                        <exclude reference="UMh-hw-372"/>
+                                        <exclude reference="WBT-ew-o4r"/>
+                                        <exclude reference="uyG-mN-g6j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UMh-hw-372"/>
+                                        <include reference="WBT-ew-o4r"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="uUQ-I4-eM5" secondAttribute="centerX" id="4jd-F4-nW1"/>
-                            <constraint firstItem="2cD-Ms-ctS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="24" id="AOh-pa-O0L"/>
-                            <constraint firstAttribute="centerX" secondItem="uAD-ei-l4k" secondAttribute="centerX" id="E5M-cu-bX2"/>
-                            <constraint firstItem="uUQ-I4-eM5" firstAttribute="top" secondItem="2cD-Ms-ctS" secondAttribute="bottom" constant="20" id="FI6-qG-B2d"/>
-                            <constraint firstAttribute="centerX" secondItem="2cD-Ms-ctS" secondAttribute="centerX" id="cIM-gj-ZGr"/>
-                            <constraint firstAttribute="centerX" secondItem="EYC-zh-MZP" secondAttribute="centerX" id="eWx-KN-WiQ"/>
-                            <constraint firstItem="uAD-ei-l4k" firstAttribute="top" secondItem="uUQ-I4-eM5" secondAttribute="bottom" constant="22" id="gsr-hj-y9d"/>
-                            <constraint firstItem="EYC-zh-MZP" firstAttribute="top" secondItem="uAD-ei-l4k" secondAttribute="bottom" constant="19" id="xPM-ou-ywy"/>
+                            <constraint firstAttribute="centerY" secondItem="2cD-Ms-ctS" secondAttribute="centerY" constant="73" id="2bP-7h-6kd"/>
+                            <constraint firstAttribute="centerX" secondItem="uAD-ei-l4k" secondAttribute="centerX" id="Ah1-X3-ek6"/>
+                            <constraint firstAttribute="centerY" secondItem="uUQ-I4-eM5" secondAttribute="centerY" constant="100" id="E4L-bp-2Yv"/>
+                            <constraint firstAttribute="centerY" secondItem="EYC-zh-MZP" secondAttribute="centerY" constant="-50" id="I73-BO-KUx"/>
+                            <constraint firstAttribute="centerX" secondItem="EYC-zh-MZP" secondAttribute="centerX" id="Pcq-N2-lgc"/>
+                            <constraint firstAttribute="centerX" secondItem="2cD-Ms-ctS" secondAttribute="centerX" id="U9E-n3-dbi"/>
+                            <constraint firstAttribute="centerY" secondItem="I1l-cZ-HaX" secondAttribute="centerY" constant="130" id="X37-qX-T7j"/>
+                            <constraint firstAttribute="centerY" secondItem="uAD-ei-l4k" secondAttribute="centerY" constant="25" id="XLl-Xr-gDB"/>
+                            <constraint firstAttribute="centerX" secondItem="I1l-cZ-HaX" secondAttribute="centerX" id="a2u-Na-hUM"/>
+                            <constraint firstAttribute="centerX" secondItem="uUQ-I4-eM5" secondAttribute="centerX" id="c42-q0-sSB"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="AOh-pa-O0L"/>
-                                <exclude reference="cIM-gj-ZGr"/>
-                                <exclude reference="4jd-F4-nW1"/>
-                                <exclude reference="FI6-qG-B2d"/>
-                                <exclude reference="E5M-cu-bX2"/>
-                                <exclude reference="gsr-hj-y9d"/>
-                                <exclude reference="eWx-KN-WiQ"/>
-                                <exclude reference="xPM-ou-ywy"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="AOh-pa-O0L"/>
-                                <include reference="cIM-gj-ZGr"/>
-                                <include reference="4jd-F4-nW1"/>
-                                <include reference="FI6-qG-B2d"/>
-                                <include reference="E5M-cu-bX2"/>
-                                <include reference="gsr-hj-y9d"/>
-                                <include reference="eWx-KN-WiQ"/>
-                                <include reference="xPM-ou-ywy"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btn" destination="EYC-zh-MZP" id="A4a-u9-mc8"/>
                         <outlet property="infoText" destination="2cD-Ms-ctS" id="3f5-DK-nrB"/>
@@ -150,7 +144,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108" y="304"/>
+            <point key="canvasLocation" x="124" y="304"/>
         </scene>
         <!--Finder-->
         <scene sceneID="k0d-mo-gfL">
