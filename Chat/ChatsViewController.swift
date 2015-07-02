@@ -11,7 +11,7 @@ class ChatsViewController: UICollectionViewController, UICollectionViewDataSourc
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadCollection:", name: "newContact", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
 
-        // Aktualisierung zur Laufzeit einbauen
+        // Verbessern: Aktualisierung zur Laufzeit einbauen
         aD.contacts = aD.data.get("Contact", predicat: nil)
 
         rotated()
