@@ -10,11 +10,11 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // aD.data.insert("Contact", id: "54321", data: ["id": "54321", "name": "Gandalf"])
-       // aD.data.insert("Contact", id: "2345234", data: ["id": "2345234", "name": "Monk"])
-      //  aD.data.insert("Contact", id: "fw45gw4", data: ["id": "fw45gw4", "name": "Qrid"])
-      //  aD.data.insert("Contact", id: "wrnwrtnwrtn", data: ["id": "wrnwrtnwrtn", "name": "Honk"])
-      //  aD.data.insert("Contact", id: "12345", data: ["id": "12345", "name": "TypO.o"])
+        //aD.data.insert("Contact", id: "54321", data: ["id": "54321", "name": "Gandalf"])
+        //aD.data.insert("Contact", id: "2345234", data: ["id": "2345234", "name": "Monk"])
+        //aD.data.insert("Contact", id: "fw45gw4", data: ["id": "fw45gw4", "name": "Qrid"])
+        //aD.data.insert("Contact", id: "wrnwrtnwrtn", data: ["id": "wrnwrtnwrtn", "name": "Honk"])
+        //aD.data.insert("Contact", id: "12345", data: ["id": "12345", "name": "TypO.o"])
         
         //var con = aD.data.getAll("Contact", properties: ["id", "name"])
         //println(con?.count)

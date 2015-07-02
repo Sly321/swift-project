@@ -15,7 +15,6 @@
 		FB4E6AEB1B3730A800460529 /* MPCBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E6AEA1B3730A800460529 /* MPCBrowser.swift */; };
 		FB4E6AED1B37341200460529 /* MPCAdvertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E6AEC1B37341200460529 /* MPCAdvertiser.swift */; };
 		FB5600FA1B3265E600A68C08 /* ChatsCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5600F91B3265E600A68C08 /* ChatsCellCollectionViewCell.swift */; };
-		FB5600FE1B326A7F00A68C08 /* platzhalter.png in Resources */ = {isa = PBXBuildFile; fileRef = FB5600FD1B326A7F00A68C08 /* platzhalter.png */; };
 		FB5D46C01B387B1500BC2057 /* ConversationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D46BF1B387B1500BC2057 /* ConversationCellTableViewCell.swift */; };
 		FB5D46C21B3891D400BC2057 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D46C11B3891D400BC2057 /* ConversationViewController.swift */; };
 		FB70D7CC1B3B26ED0086FF0E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70D7CB1B3B26ED0086FF0E /* Contact.swift */; };
@@ -56,7 +55,6 @@
 		FB4E6AEA1B3730A800460529 /* MPCBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCBrowser.swift; sourceTree = "<group>"; };
 		FB4E6AEC1B37341200460529 /* MPCAdvertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCAdvertiser.swift; sourceTree = "<group>"; };
 		FB5600F91B3265E600A68C08 /* ChatsCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		FB5600FD1B326A7F00A68C08 /* platzhalter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platzhalter.png; sourceTree = "<group>"; };
 		FB5D46BF1B387B1500BC2057 /* ConversationCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellTableViewCell.swift; sourceTree = "<group>"; };
 		FB5D46C11B3891D400BC2057 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		FB70D7CB1B3B26ED0086FF0E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				FB4E6AEA1B3730A800460529 /* MPCBrowser.swift */,
 				FB4E6AE81B36E89800460529 /* MPCSession.swift */,
 				FB4E6AEC1B37341200460529 /* MPCAdvertiser.swift */,
-				FB5600FD1B326A7F00A68C08 /* platzhalter.png */,
 				FB5600F91B3265E600A68C08 /* ChatsCellCollectionViewCell.swift */,
 				FBF5D0481B2F7B730066C29A /* CoreData.swift */,
 				FBF5D0401B2F6C7D0066C29A /* ChatsViewController.swift */,
@@ -272,7 +269,6 @@
 				47D282E91B4453E90065BB34 /* img_chat_32x32.png in Resources */,
 				FBF5D01B1B2F5DB30066C29A /* LaunchScreen.xib in Resources */,
 				FBF5D0181B2F5DB30066C29A /* Images.xcassets in Resources */,
-				FB5600FE1B326A7F00A68C08 /* platzhalter.png in Resources */,
 				47D282EB1B4453E90065BB34 /* img_finder_32x32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -448,7 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
