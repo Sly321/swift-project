@@ -177,7 +177,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
         <scene sceneID="Y5u-ga-pbx">
             <objects>
                 <navigationController title="Chat Navogation Controller" id="jrW-Ih-Adx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="img_chat_32x32.png" id="d0R-nT-Ke4">
+                    <tabBarItem key="tabBarItem" title="Chats" image="img_chat_32x32.png" id="d0R-nT-Ke4">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXa-6G-C1W">
@@ -574,8 +574,8 @@ your shown name in the Chat. You only need to set this name once. After this it 
                     <connections>
                         <segue destination="iwN-uK-iCs" kind="relationship" relationship="viewControllers" id="ORW-6z-oQi"/>
                         <segue destination="jrW-Ih-Adx" kind="relationship" relationship="viewControllers" id="d1h-U2-I4Q"/>
-                        <segue destination="94r-9a-vb2" kind="relationship" relationship="viewControllers" id="2pf-xZ-rRT"/>
                         <segue destination="5cQ-Ch-YV1" kind="relationship" relationship="viewControllers" id="acf-2s-cyL"/>
+                        <segue destination="94r-9a-vb2" kind="relationship" relationship="viewControllers" id="2pf-xZ-rRT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbG-bP-HEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
