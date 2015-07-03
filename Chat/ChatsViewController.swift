@@ -49,7 +49,7 @@ class ChatsViewController: UICollectionViewController, UICollectionViewDataSourc
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("chatsCell", forIndexPath: indexPath) as! ChatsCellCollectionViewCell
-
+        
         cell.txt.text = aD.contacts[indexPath.item]["name"] as? String
         
         return cell

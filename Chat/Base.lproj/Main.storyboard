@@ -210,9 +210,8 @@ your shown name in the Chat. You only need to set this name once.</string>
                                     <rect key="frame" x="0.0" y="0.0" width="175" height="134"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-DT-f0d">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_contact_512x512.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-DT-f0d">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="66" id="Nmg-0r-STK">
                                                     <variation key="widthClass=compact" constant="80"/>
@@ -602,6 +601,7 @@ your shown name in the Chat. You only need to set this name once.</string>
     </scenes>
     <resources>
         <image name="img_chat_32x32.png" width="32" height="32"/>
+        <image name="img_contact_512x512.png" width="512" height="512"/>
         <image name="img_contacts_32x32.png" width="32" height="32"/>
         <image name="img_finder_32x32.png" width="32" height="32"/>
         <image name="img_gear_32x32.png" width="32" height="32"/>
