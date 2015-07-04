@@ -10,6 +10,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet var fieldVertical: NSLayoutConstraint!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var titel: UINavigationItem!
+    @IBOutlet var offLabel: UILabel!
     
     var chatid: String!
     var conversation: Array<Dictionary<String,  AnyObject>>!
@@ -20,6 +21,15 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeConstraints:", name: UIKeyboardWillHideNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableView:", name: "didReceiveData", object: nil)
         conversation = aD.data.get("Message", predicat: chatid)
+        
+        if (aD.session.getPeerById(chatid) == nil) {
+            self.textField.hidden = true
+            self.offLabel.text = "Dieser Benutzer ist offline."
+        
+        } else {
+            self.offLabel.hidden = true
+        }
+        
         textField.returnKeyType = UIReturnKeyType.Send
     }
     
