@@ -159,15 +159,34 @@ your shown name in the Chat. You only need to set this name once.</string>
                     <view key="view" contentMode="scaleToFill" id="1wE-eW-1Ov">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-QF-1kz">
+                                <rect key="frame" x="43" y="97" width="515" height="406"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iwN-uK-iCs" id="viv-Ii-Ne1"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5T5-QF-1kz" secondAttribute="centerX" id="6Dx-w0-Fyl"/>
+                            <constraint firstItem="jWh-TS-eWx" firstAttribute="top" secondItem="5T5-QF-1kz" secondAttribute="bottom" id="LvD-hb-bdp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5T5-QF-1kz" secondAttribute="trailing" id="NVl-48-Cyr"/>
+                            <constraint firstItem="5T5-QF-1kz" firstAttribute="leading" secondItem="1wE-eW-1Ov" secondAttribute="leadingMargin" id="TRF-mC-aJa"/>
+                            <constraint firstItem="5T5-QF-1kz" firstAttribute="top" secondItem="1EG-fx-RXp" secondAttribute="bottom" id="Z6f-Ay-19h"/>
+                            <constraint firstAttribute="centerY" secondItem="5T5-QF-1kz" secondAttribute="centerY" id="ySt-1Y-s2C"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Finder" image="img_finder_32x32.png" id="EFV-qS-fru">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="scrollView" destination="5T5-QF-1kz" id="8w4-ld-1OT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soV-VM-439" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732.5" y="304"/>
+            <point key="canvasLocation" x="1732" y="304"/>
         </scene>
         <!--Chat Navogation Controller-->
         <scene sceneID="Y5u-ga-pbx">
@@ -231,7 +250,7 @@ your shown name in the Chat. You only need to set this name once.</string>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcw-GU-Ahe">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -477,7 +496,7 @@ your shown name in the Chat. You only need to set this name once.</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25y-9x-ZnO">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
