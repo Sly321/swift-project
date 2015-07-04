@@ -13,10 +13,10 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //aD.advertiser.view = self
-        //aD.browser.delegate = self
-        //aD.browser.browser.startBrowsingForPeers()
-        //println(aD.username)
+        aD.advertiser.view = self
+        aD.browser.delegate = self
+        aD.browser.browser.startBrowsingForPeers()
+        println(aD.username)
         
         // 1
         let image = UIImage(named:"dart")!
