@@ -18,7 +18,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var aboutmeText: UITextField!
     let aD = UIApplication.sharedApplication().delegate as! AppDelegate
     var userdata: [Dictionary<String, AnyObject>]?
-    
     @IBOutlet var textFieldsCollection: [UITextField]! = nil
     
     override func viewDidLoad() {
