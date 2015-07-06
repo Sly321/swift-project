@@ -26,6 +26,55 @@ class CoreData: NSObject {
             mOC!.save(nil)
         }
     }
+    
+    func updateUser(data: AnyObject) {
+        
+        var fetchRequest = NSFetchRequest()
+        var eD = NSEntityDescription.entityForName("User", inManagedObjectContext: mOC!)
+        fetchRequest.entity = eD
+        
+        var error : NSError?
+        var fetchedObjects = mOC!.executeFetchRequest(fetchRequest, error: &error)
+        
+        //Daten Updaten
+        if let fO = fetchedObjects {
+            if error == nil {
+                for fetchedData in fO {
+                    if((data[0].valueForKey("name")) != nil){
+                        fetchedData.setValue(data[0].valueForKey("name"), forKey: "name")
+                    }
+                    if((data[0].valueForKey("mood")) != nil){
+                        fetchedData.setValue(data[0].valueForKey("mood"), forKey: "mood")
+                    }
+                    
+                    // TO_DO String in Datum umwandeln und Datum übergeben an CoreData
+                    /*
+                    if((data[0].valueForKey("age")) != nil){
+                        fetchedData.setValue(data[0].valueForKey("age"), forKey: "age")
+                    }
+                    */
+                    if((data[0].valueForKey("gender")) != nil){
+                        fetchedData.setValue(data[0].valueForKey("gender"), forKey: "gender")
+                    }
+                    if((data[0].valueForKey("interests")) != nil){
+                        fetchedData.setValue(data[0].valueForKey("interests"), forKey: "interests")
+                    }
+                    if((data[0].valueForKey("about_me")) != nil){
+                        fetchedData.setValue(data[0].valueForKey("about_me"), forKey: "about_me")
+                    }
+                    
+                }
+                
+                if !mOC!.save(&error) {
+                    NSLog("Unresolved error (error), (error!.userInfo)")
+                    abort()
+                }
+            }
+        }
+    }
+    
+  	
+    
 
     func getManagedObject(entityName: String, format: String, predicat: String) -> NSManagedObject {
         let request = NSFetchRequest(entityName: entityName)
