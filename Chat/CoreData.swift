@@ -6,6 +6,7 @@ class CoreData: NSObject {
     
     let mOC = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
+	
     // Beschreibt Entity in Core Data
     func insert(entityName: String, id: AnyObject?, data: Dictionary<String, AnyObject>) {
         
