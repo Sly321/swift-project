@@ -43,26 +43,53 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
         
         centerScrollViewContents()
         
-        // add button for contact "54321"
+        /* test
+        self.addButton(0, name: "0")
+        self.addButton(1, name: "1")
+        self.addButton(2, name: "2")
         
-        let btn = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
+        self.removeButton(1)
         
+        self.addButton(3, name: "3")
         
-        let dot = UIImage(named: "dot") as UIImage?
-        btn.setImage(dot, forState: .Normal)
-        btn.setTitle("Test", forState: UIControlState.Normal)
-        btn.tag = 0
-        btn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        
-        self.containerView.addSubview(btn)
-        
+        self.removeButton(2)
         
         let imageView = UIImageView(image: UIImage(named: "dot"))
         imageView.center = CGPoint(x: containerView.center.x, y: containerView.center.y);
         containerView.addSubview(imageView)
+
+        */
+    }
+    
+    
+    func addButton(tag: Int, name: String) {
         
+        let btn = UIButton(frame: CGRect(x: 100 * tag, y: 100 * tag, width: 200, height: 200))
+        let dot = UIImage(named: "dot") as UIImage?
         
+        btn.setImage(dot, forState: .Normal)
+        btn.setTitle(name, forState: UIControlState.Normal)
+        btn.tag = tag
+        btn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        // Button-, Text-Positionierung
+        let spacing: CGFloat = 6.0;
+        
+        let imageSize: CGSize = btn.imageView!.frame.size;
+        btn.titleEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width, -(imageSize.height + spacing), 0.0);
+        
+        let titleSize: CGSize = btn.titleLabel!.frame.size;
+        btn.imageEdgeInsets = UIEdgeInsetsMake(-(titleSize.height + spacing), 0.0, 0.0, -titleSize.width);
+        
+        self.containerView.addSubview(btn)
+    }
+    
+    func removeButton(tag: Int){
+        for view in self.containerView.subviews {
+            if(view.tag == tag){
+                view.removeFromSuperview()
+            }
+        }
     }
     
     func centerScrollViewContents() {
@@ -120,7 +147,8 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
                 
                 btn.setTitle("\(name.displayName)", forState: UIControlState.Normal)
                 btn.tag = index
-                btn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+                //btn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+                btn.addTarget(self, action: "lostPeer:", forControlEvents: UIControlEvents.TouchUpInside)
                 
                 self.containerView.addSubview(btn)
                 
@@ -137,8 +165,9 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
     
     func lostPeer() {
         NSOperationQueue.mainQueue().addOperationWithBlock {
-            for view in self.view.subviews {
-                view.removeFromSuperview()
+            
+            for var i = 1; i < self.containerView.subviews.count; i++ {
+                self.containerView.subviews[i].removeFromSuperview()
             }
             
             self.foundPeer()
@@ -156,7 +185,9 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
     
     func btnPressed(sender: UIButton!) {
         let selectedPeer = aD.browser.foundPeers[sender.tag] as MCPeerID
-        aD.browser.browser.invitePeer(selectedPeer, toSession: aD.session.session, withContext: nil, timeout: 10)
+        
+        
+        //aD.browser.browser.invitePeer(selectedPeer, toSession: aD.session.session, withContext: nil, timeout: 10)
     }
     
     
