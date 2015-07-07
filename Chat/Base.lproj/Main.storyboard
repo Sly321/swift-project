@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -160,8 +160,8 @@ your shown name in the Chat. You only need to set this name once.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-QF-1kz">
-                                <rect key="frame" x="43" y="97" width="515" height="406"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-QF-1kz">
+                                <rect key="frame" x="0.0" y="56" width="600" height="495"/>
                                 <connections>
                                     <outlet property="delegate" destination="iwN-uK-iCs" id="viv-Ii-Ne1"/>
                                 </connections>
@@ -169,17 +169,16 @@ your shown name in the Chat. You only need to set this name once.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="5T5-QF-1kz" secondAttribute="centerX" id="6Dx-w0-Fyl"/>
-                            <constraint firstItem="jWh-TS-eWx" firstAttribute="top" secondItem="5T5-QF-1kz" secondAttribute="bottom" id="LvD-hb-bdp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5T5-QF-1kz" secondAttribute="trailing" id="NVl-48-Cyr"/>
-                            <constraint firstItem="5T5-QF-1kz" firstAttribute="leading" secondItem="1wE-eW-1Ov" secondAttribute="leadingMargin" id="TRF-mC-aJa"/>
-                            <constraint firstItem="5T5-QF-1kz" firstAttribute="top" secondItem="1EG-fx-RXp" secondAttribute="bottom" id="Z6f-Ay-19h"/>
-                            <constraint firstAttribute="centerY" secondItem="5T5-QF-1kz" secondAttribute="centerY" id="ySt-1Y-s2C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5T5-QF-1kz" secondAttribute="trailing" constant="-16" id="TyU-xh-0OW"/>
+                            <constraint firstItem="jWh-TS-eWx" firstAttribute="top" secondItem="5T5-QF-1kz" secondAttribute="bottom" id="bjN-1P-8Bq"/>
+                            <constraint firstItem="5T5-QF-1kz" firstAttribute="top" secondItem="1EG-fx-RXp" secondAttribute="bottom" constant="36" id="fMa-ED-FqW"/>
+                            <constraint firstItem="5T5-QF-1kz" firstAttribute="leading" secondItem="1wE-eW-1Ov" secondAttribute="leadingMargin" constant="-16" id="jbl-MA-wTy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Finder" image="img_finder_32x32.png" id="EFV-qS-fru">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" title="Finder" id="bHS-oC-uoX"/>
                     <connections>
                         <outlet property="scrollView" destination="5T5-QF-1kz" id="8w4-ld-1OT"/>
                     </connections>

@@ -8,8 +8,7 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
     let aD = UIApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet var scrollView: UIScrollView!
-    
-    var imageView : UIImageView!
+    var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,39 +17,57 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
         aD.browser.browser.startBrowsingForPeers()
         println(aD.username)
         
-        // 1
+        // add background image
         let image = UIImage(named:"dart")!
-        imageView = UIImageView(image: image)
-        imageView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:image.size)
-        scrollView.addSubview(imageView)
+        let bgView = UIImageView(image: image)
+        bgView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:image.size)
         
-        // 2
-        scrollView.contentSize = image.size
+        scrollView.addSubview(bgView)
         
-        // 3
-        var doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
-        doubleTapRecognizer.numberOfTapsRequired = 2
-        doubleTapRecognizer.numberOfTouchesRequired = 1
-        scrollView.addGestureRecognizer(doubleTapRecognizer)
+        // Set up the container view to hold your custom view hierarchy
+        containerView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size:image.size))
+        scrollView.addSubview(containerView)
         
-        // 4
+        // Tell the scroll view the size of the contents
+        scrollView.contentSize = image.size;
+        
+        // Set up the minimum & maximum zoom scales
         let scrollViewFrame = scrollView.frame
         let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
         let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
-        let minScale = min(scaleWidth, scaleHeight);
-        scrollView.minimumZoomScale = minScale;
+        let minScale = min(scaleWidth, scaleHeight)
         
-        // 5
+        scrollView.minimumZoomScale = minScale
         scrollView.maximumZoomScale = 1.0
-        scrollView.zoomScale = minScale;
+        scrollView.zoomScale = 1.0
         
-        // 6
         centerScrollViewContents()
+        
+        // add button for contact "54321"
+        
+        let btn = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
+        
+        
+        let dot = UIImage(named: "dot") as UIImage?
+        btn.setImage(dot, forState: .Normal)
+        btn.setTitle("Test", forState: UIControlState.Normal)
+        btn.tag = 0
+        btn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        self.containerView.addSubview(btn)
+        
+        
+        let imageView = UIImageView(image: UIImage(named: "dot"))
+        imageView.center = CGPoint(x: containerView.center.x, y: containerView.center.y);
+        containerView.addSubview(imageView)
+        
+        
     }
     
     func centerScrollViewContents() {
         let boundsSize = scrollView.bounds.size
-        var contentsFrame = imageView.frame
+        var contentsFrame = containerView.frame
         
         if contentsFrame.size.width < boundsSize.width {
             contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0
@@ -64,32 +81,11 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
             contentsFrame.origin.y = 0.0
         }
         
-        imageView.frame = contentsFrame
-    }
-    
-    func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer) {
-        // 1
-        let pointInView = recognizer.locationInView(imageView)
-        
-        // 2
-        var newZoomScale = scrollView.zoomScale * 1.5
-        newZoomScale = min(newZoomScale, scrollView.maximumZoomScale)
-        
-        // 3
-        let scrollViewSize = scrollView.bounds.size
-        let w = scrollViewSize.width / newZoomScale
-        let h = scrollViewSize.height / newZoomScale
-        let x = pointInView.x - (w / 2.0)
-        let y = pointInView.y - (h / 2.0)
-        
-        let rectToZoomTo = CGRectMake(x, y, w, h);
-        
-        // 4
-        scrollView.zoomToRect(rectToZoomTo, animated: true)
+        containerView.frame = contentsFrame
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return imageView
+        return containerView
     }
     
     func scrollViewDidZoom(scrollView: UIScrollView) {
@@ -112,22 +108,25 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
     func foundPeer() {
         
         NSOperationQueue.mainQueue().addOperationWithBlock {
-            var yDis: CGFloat = 20  // our Starting Offset, could be 0
-            
+            var xDis: CGFloat = 20  // our Starting Offset, could be 0
+            var yDis: CGFloat = 20
             
             for (index, name) in enumerate(self.aD.browser.foundPeers) {
                 
-                let btn = UIButton(frame: CGRect(x: 50, y: yDis, width: 250, height: 30))
+                let btn = UIButton(frame: CGRect(x: xDis, y: yDis, width: 100, height: 100))
                 
-                btn.backgroundColor = UIColor.lightGrayColor()
+                let dot = UIImage(named: "dot") as UIImage?
+                btn.setImage(dot, forState: .Normal)
+                
                 btn.setTitle("\(name.displayName)", forState: UIControlState.Normal)
                 btn.tag = index
                 btn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
                 
+                self.containerView.addSubview(btn)
                 
-                self.view.addSubview(btn)
                 
-                yDis += 50
+                xDis += 100
+                yDis += 100
             }
         }
         
