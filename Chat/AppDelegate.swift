@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var name: String!
     var contacts: Array<Dictionary<String, AnyObject>>!
     let dateFormatter = NSDateFormatter();
+    var currentView: AnyObject!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         

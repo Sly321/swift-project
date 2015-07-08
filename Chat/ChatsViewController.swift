@@ -8,6 +8,7 @@ class ChatsViewController: UICollectionViewController, UICollectionViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        aD.currentView = self
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadCollection:", name: "newContact", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
 

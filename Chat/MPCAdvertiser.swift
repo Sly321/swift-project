@@ -14,7 +14,6 @@ class MPCAdvertiser: NSObject, MCNearbyServiceAdvertiserDelegate, UIAlertViewDel
     var iOS7alert: UIAlertView!
     var iOS8alert: UIAlertController!
     var invitationHandler: ((Bool, MCSession!)->Void)!
-    var view: AnyObject!
     
     override init() {
         super.init()
@@ -34,7 +33,7 @@ class MPCAdvertiser: NSObject, MCNearbyServiceAdvertiserDelegate, UIAlertViewDel
                 (alertAction) -> Void in self.invitationHandler(true, self.aD.session.session)})
             iOS8alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
                 (alertAction) -> Void in self.invitationHandler(false, nil)})
-            view.presentViewController(iOS8alert, animated: true, completion: nil)
+            aD.currentView.presentViewController(iOS8alert, animated: true, completion: nil)
             
         // iOS7
         } else {

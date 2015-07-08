@@ -26,6 +26,15 @@ class MPCSession: NSObject, MCSessionDelegate {
             let name = peerID.displayName.stringByReplacingOccurrencesOfString(id + " ", withString: "", options: nil, range: nil)
             aD.data.insert("Contact", id: id, data: ["id": id, "name": name])
             addToContacts(["id": id, "name": name])
+            break
+            
+        case MCSessionState.Connecting:
+            println("Verbinde mit: \(peerID)")
+            break
+            
+        case MCSessionState.NotConnected:
+            println("Konnte nicht mit \(peerID) verbinden.")
+            break
             
         default:
             println("Did not connect to session: \(peerID)")

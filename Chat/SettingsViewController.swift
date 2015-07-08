@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        aD.currentView = self
         // Do any additional setup after loading the view.
     }
     

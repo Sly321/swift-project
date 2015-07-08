@@ -10,10 +10,11 @@ import UIKit
 
 class ContactViewController: UIViewController {
 
-     
+    let aD = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        aD.currentView = self
 
     }
 

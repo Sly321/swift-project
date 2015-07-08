@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zh-MZP">
-                                <rect key="frame" x="241" y="279" width="118" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zh-MZP">
+                                <rect key="frame" x="280" y="335" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CQ6-2X-qFT">
                                         <variation key="widthClass=compact" constant="100"/>
@@ -48,46 +48,21 @@
                                     <action selector="register:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oiY-2v-WGT"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-ei-l4k">
-                                <rect key="frame" x="214" y="161" width="173" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="UMh-hw-372">
-                                        <variation key="widthClass=compact" constant="60"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="221" id="WBT-ew-o4r"/>
-                                </constraints>
-                                <string key="text">Choose you Username, this is 
-your shown name in the Chat. You only need to set this name once. After this it will be saved for later sessions.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.12190792758865734" green="0.85726404671717171" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UMh-hw-372"/>
-                                        <exclude reference="WBT-ew-o4r"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="UMh-hw-372"/>
-                                        <include reference="WBT-ew-o4r"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-Ms-ctS">
-                                <rect key="frame" x="241" y="86" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-Ms-ctS">
+                                <rect key="frame" x="300" y="227" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
-                                <rect key="frame" x="241" y="112" width="118" height="34"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
+                                <rect key="frame" x="200" y="185" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TLj-mI-c90">
                                         <variation key="widthClass=compact" constant="40"/>
                                     </constraint>
                                     <constraint firstAttribute="width" constant="221" id="UDn-Bx-mfK"/>
+                                    <constraint firstAttribute="width" constant="200" id="Wg0-F3-gXn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -100,48 +75,72 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="TLj-mI-c90"/>
-                                        <include reference="UDn-Bx-mfK"/>
+                                        <exclude reference="UDn-Bx-mfK"/>
+                                        <exclude reference="Wg0-F3-gXn"/>
                                     </mask>
                                 </variation>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1l-cZ-HaX">
+                                <rect key="frame" x="261" y="160" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-ei-l4k">
+                                <rect key="frame" x="200" y="230" width="200" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HfU-Ks-PA1"/>
+                                    <constraint firstAttribute="width" constant="200" id="TEJ-O8-2eK"/>
+                                    <constraint firstAttribute="height" constant="98" id="UMh-hw-372">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="221" id="WBT-ew-o4r"/>
+                                    <constraint firstAttribute="height" constant="90" id="uai-0b-6Io"/>
+                                    <constraint firstAttribute="height" constant="8" id="uyG-mN-g6j"/>
+                                </constraints>
+                                <string key="text">Choose you name, this is
+your shown name in the Chat. You only need to set this name once.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.72157118060000003" blue="0.65648703369999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HfU-Ks-PA1"/>
+                                        <exclude reference="UMh-hw-372"/>
+                                        <exclude reference="WBT-ew-o4r"/>
+                                        <exclude reference="uyG-mN-g6j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="TEJ-O8-2eK"/>
+                                        <exclude reference="UMh-hw-372"/>
+                                        <exclude reference="WBT-ew-o4r"/>
+                                        <exclude reference="uai-0b-6Io"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="uUQ-I4-eM5" secondAttribute="centerX" id="4jd-F4-nW1"/>
-                            <constraint firstItem="2cD-Ms-ctS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="24" id="AOh-pa-O0L"/>
-                            <constraint firstAttribute="centerX" secondItem="uAD-ei-l4k" secondAttribute="centerX" id="E5M-cu-bX2"/>
-                            <constraint firstItem="uUQ-I4-eM5" firstAttribute="top" secondItem="2cD-Ms-ctS" secondAttribute="bottom" constant="20" id="FI6-qG-B2d"/>
-                            <constraint firstAttribute="centerX" secondItem="2cD-Ms-ctS" secondAttribute="centerX" id="cIM-gj-ZGr"/>
-                            <constraint firstAttribute="centerX" secondItem="EYC-zh-MZP" secondAttribute="centerX" id="eWx-KN-WiQ"/>
-                            <constraint firstItem="uAD-ei-l4k" firstAttribute="top" secondItem="uUQ-I4-eM5" secondAttribute="bottom" constant="22" id="gsr-hj-y9d"/>
-                            <constraint firstItem="EYC-zh-MZP" firstAttribute="top" secondItem="uAD-ei-l4k" secondAttribute="bottom" constant="19" id="xPM-ou-ywy"/>
+                            <constraint firstAttribute="centerY" secondItem="2cD-Ms-ctS" secondAttribute="centerY" constant="73" id="2bP-7h-6kd"/>
+                            <constraint firstAttribute="centerX" secondItem="uAD-ei-l4k" secondAttribute="centerX" id="Ah1-X3-ek6"/>
+                            <constraint firstAttribute="centerY" secondItem="uUQ-I4-eM5" secondAttribute="centerY" constant="100" id="E4L-bp-2Yv"/>
+                            <constraint firstAttribute="centerY" secondItem="EYC-zh-MZP" secondAttribute="centerY" constant="-50" id="I73-BO-KUx"/>
+                            <constraint firstAttribute="centerX" secondItem="EYC-zh-MZP" secondAttribute="centerX" id="Pcq-N2-lgc"/>
+                            <constraint firstAttribute="centerX" secondItem="2cD-Ms-ctS" secondAttribute="centerX" id="U9E-n3-dbi"/>
+                            <constraint firstAttribute="centerY" secondItem="I1l-cZ-HaX" secondAttribute="centerY" constant="130" id="X37-qX-T7j"/>
+                            <constraint firstAttribute="centerY" secondItem="uAD-ei-l4k" secondAttribute="centerY" constant="25" id="XLl-Xr-gDB"/>
+                            <constraint firstAttribute="centerX" secondItem="I1l-cZ-HaX" secondAttribute="centerX" id="a2u-Na-hUM"/>
+                            <constraint firstAttribute="centerX" secondItem="uUQ-I4-eM5" secondAttribute="centerX" id="c42-q0-sSB"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="AOh-pa-O0L"/>
-                                <exclude reference="cIM-gj-ZGr"/>
-                                <exclude reference="4jd-F4-nW1"/>
-                                <exclude reference="FI6-qG-B2d"/>
-                                <exclude reference="E5M-cu-bX2"/>
-                                <exclude reference="gsr-hj-y9d"/>
-                                <exclude reference="eWx-KN-WiQ"/>
-                                <exclude reference="xPM-ou-ywy"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="AOh-pa-O0L"/>
-                                <include reference="cIM-gj-ZGr"/>
-                                <include reference="4jd-F4-nW1"/>
-                                <include reference="FI6-qG-B2d"/>
-                                <include reference="E5M-cu-bX2"/>
-                                <include reference="gsr-hj-y9d"/>
-                                <include reference="eWx-KN-WiQ"/>
-                                <include reference="xPM-ou-ywy"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="InfoLabel" destination="uAD-ei-l4k" id="HBe-g3-suS"/>
+                        <outlet property="UserLabel" destination="I1l-cZ-HaX" id="ufp-55-SKI"/>
                         <outlet property="btn" destination="EYC-zh-MZP" id="A4a-u9-mc8"/>
                         <outlet property="infoText" destination="2cD-Ms-ctS" id="3f5-DK-nrB"/>
                         <outlet property="textField" destination="uUQ-I4-eM5" id="JyE-He-7hY"/>
@@ -150,7 +149,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108" y="304"/>
+            <point key="canvasLocation" x="124" y="304"/>
         </scene>
         <!--Finder-->
         <scene sceneID="k0d-mo-gfL">
@@ -232,9 +231,9 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <rect key="frame" x="0.0" y="0.0" width="175" height="134"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-DT-f0d">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-DT-f0d">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="66" id="Nmg-0r-STK">
                                                     <variation key="widthClass=compact" constant="80"/>
@@ -524,7 +523,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                         <outlet property="interestsText" destination="MWR-Iv-BQc" id="MnC-R7-GyA"/>
                         <outlet property="moodText" destination="beE-Gr-v8e" id="hm5-ed-6XD"/>
                         <outlet property="usernameText" destination="NsS-XG-EQt" id="Zbs-LQ-A2r"/>
-                        <outletCollection property="textFieldsCollection" destination="NsS-XG-EQt" id="75j-pl-86V"/>
+                        <outletCollection property="textFieldsCollection" destination="NsS-XG-EQt" collectionClass="NSMutableArray" id="75j-pl-86V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jX-Sf-jH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,30 +616,31 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                    <variation key="widthClass=compact">
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <rect key="frame" x="8" y="31" width="304" height="20"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="datum" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvS-Et-NII">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvS-Et-NII">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="8" y="8" width="304" height="16"/>
-                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgF-X4-dx6">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="GgF-X4-dx6" firstAttribute="trailing" secondItem="65N-UU-mrP" secondAttribute="trailingMargin" id="8Kj-Ci-xoY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Z0U-AV-keX" secondAttribute="trailing" constant="5" id="DLT-VJ-1bL">
                                                     <variation key="widthClass=compact" constant="0.0"/>
                                                 </constraint>
                                                 <constraint firstItem="kvS-Et-NII" firstAttribute="top" secondItem="65N-UU-mrP" secondAttribute="topMargin" id="RaH-A3-XbA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="kvS-Et-NII" secondAttribute="trailing" constant="10" id="VFh-jI-VDo">
-                                                    <variation key="widthClass=compact" constant="0.0"/>
-                                                </constraint>
+                                                <constraint firstItem="GgF-X4-dx6" firstAttribute="top" secondItem="65N-UU-mrP" secondAttribute="topMargin" id="eX3-Sg-egH"/>
                                                 <constraint firstItem="Z0U-AV-keX" firstAttribute="top" secondItem="kvS-Et-NII" secondAttribute="bottom" constant="10" id="kjN-Cz-Mpm">
                                                     <variation key="widthClass=compact" constant="7"/>
                                                 </constraint>
@@ -655,13 +655,15 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                                 <mask key="subviews">
                                                     <exclude reference="Z0U-AV-keX"/>
                                                     <exclude reference="kvS-Et-NII"/>
+                                                    <exclude reference="GgF-X4-dx6"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="8Kj-Ci-xoY"/>
+                                                    <exclude reference="eX3-Sg-egH"/>
                                                     <exclude reference="DLT-VJ-1bL"/>
                                                     <exclude reference="kjN-Cz-Mpm"/>
                                                     <exclude reference="tsP-xs-xjw"/>
                                                     <exclude reference="RaH-A3-XbA"/>
-                                                    <exclude reference="VFh-jI-VDo"/>
                                                     <exclude reference="wrD-IT-veL"/>
                                                 </mask>
                                             </variation>
@@ -669,20 +671,27 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                                 <mask key="subviews">
                                                     <include reference="Z0U-AV-keX"/>
                                                     <include reference="kvS-Et-NII"/>
+                                                    <include reference="GgF-X4-dx6"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="8Kj-Ci-xoY"/>
+                                                    <include reference="eX3-Sg-egH"/>
                                                     <include reference="DLT-VJ-1bL"/>
                                                     <include reference="kjN-Cz-Mpm"/>
                                                     <include reference="tsP-xs-xjw"/>
                                                     <include reference="RaH-A3-XbA"/>
-                                                    <include reference="VFh-jI-VDo"/>
                                                     <include reference="wrD-IT-veL"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="datum" destination="kvS-Et-NII" id="sPV-dy-Qkk"/>
+                                            <outlet property="leftMarginDate" destination="wrD-IT-veL" id="8Ld-dk-d5x"/>
+                                            <outlet property="leftMarginMessage" destination="tsP-xs-xjw" id="djN-mF-RE3"/>
                                             <outlet property="message" destination="Z0U-AV-keX" id="Vd6-er-jLZ"/>
+                                            <outlet property="name" destination="GgF-X4-dx6" id="ap1-UH-ssw"/>
+                                            <outlet property="rightMarginMessage" destination="DLT-VJ-1bL" id="d7F-qc-gLz"/>
+                                            <outlet property="rightMarginName" destination="8Kj-Ci-xoY" id="wGP-qd-zRr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -691,13 +700,18 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <outlet property="delegate" destination="9Ba-t5-nll" id="yLU-l2-8Qk"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This user is offline." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV3-WA-ksz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7gF-4p-Lic" firstAttribute="top" secondItem="cYm-0F-dNV" secondAttribute="bottom" constant="15" id="Dbh-0C-oW2"/>
-                            <constraint firstItem="cYm-0F-dNV" firstAttribute="top" secondItem="ArS-Xa-H7n" secondAttribute="topMargin" constant="64" id="HN3-2A-1Rj">
-                                <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
+                            <constraint firstAttribute="bottomMargin" secondItem="CV3-WA-ksz" secondAttribute="bottom" constant="15" id="9jF-HM-HHi"/>
+                            <constraint firstItem="7gF-4p-Lic" firstAttribute="top" secondItem="cYm-0F-dNV" secondAttribute="bottom" constant="15" id="AIb-no-wgr"/>
+                            <constraint firstAttribute="centerX" secondItem="CV3-WA-ksz" secondAttribute="centerX" id="H8p-L2-S9X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7gF-4p-Lic" secondAttribute="trailing" constant="8" id="QJC-kg-F73">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -706,22 +720,26 @@ your shown name in the Chat. You only need to set this name once. After this it 
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="7gF-4p-Lic" secondAttribute="centerX" id="hli-31-5qp"/>
                             <constraint firstAttribute="centerX" secondItem="cYm-0F-dNV" secondAttribute="centerX" id="hsu-Ou-UdZ"/>
-                            <constraint firstItem="fEL-Fz-Ntf" firstAttribute="top" secondItem="7gF-4p-Lic" secondAttribute="bottom" constant="15" id="lNQ-Od-0Sw"/>
+                            <constraint firstItem="cYm-0F-dNV" firstAttribute="top" secondItem="ArS-Xa-H7n" secondAttribute="topMargin" constant="64" id="jSX-Ds-PX0"/>
                             <constraint firstItem="cYm-0F-dNV" firstAttribute="leading" secondItem="ArS-Xa-H7n" secondAttribute="leadingMargin" constant="-16" id="rfw-GN-HXI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="7gF-4p-Lic" secondAttribute="bottom" constant="15" id="sQc-kB-GTP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="7gF-4p-Lic"/>
                                 <exclude reference="cYm-0F-dNV"/>
+                                <exclude reference="CV3-WA-ksz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Dbh-0C-oW2"/>
+                                <exclude reference="AIb-no-wgr"/>
                                 <exclude reference="QJC-kg-F73"/>
                                 <exclude reference="hW3-DJ-c77"/>
                                 <exclude reference="hli-31-5qp"/>
-                                <exclude reference="lNQ-Od-0Sw"/>
-                                <exclude reference="HN3-2A-1Rj"/>
+                                <exclude reference="sQc-kB-GTP"/>
+                                <exclude reference="9jF-HM-HHi"/>
+                                <exclude reference="H8p-L2-S9X"/>
                                 <exclude reference="hsu-Ou-UdZ"/>
+                                <exclude reference="jSX-Ds-PX0"/>
                                 <exclude reference="rfw-GN-HXI"/>
                             </mask>
                         </variation>
@@ -729,15 +747,18 @@ your shown name in the Chat. You only need to set this name once. After this it 
                             <mask key="subviews">
                                 <include reference="7gF-4p-Lic"/>
                                 <include reference="cYm-0F-dNV"/>
+                                <include reference="CV3-WA-ksz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Dbh-0C-oW2"/>
+                                <include reference="AIb-no-wgr"/>
                                 <include reference="QJC-kg-F73"/>
                                 <include reference="hW3-DJ-c77"/>
                                 <include reference="hli-31-5qp"/>
-                                <include reference="lNQ-Od-0Sw"/>
-                                <include reference="HN3-2A-1Rj"/>
+                                <include reference="sQc-kB-GTP"/>
+                                <include reference="9jF-HM-HHi"/>
+                                <include reference="H8p-L2-S9X"/>
                                 <include reference="hsu-Ou-UdZ"/>
+                                <include reference="jSX-Ds-PX0"/>
                                 <include reference="rfw-GN-HXI"/>
                             </mask>
                         </variation>
@@ -745,10 +766,14 @@ your shown name in the Chat. You only need to set this name once. After this it 
                     <navigationItem key="navigationItem" title="Title" id="fn0-d6-QoD"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="fieldVertical" destination="lNQ-Od-0Sw" id="jbs-FR-4yS"/>
+                        <outlet property="fieldVertical" destination="sQc-kB-GTP" id="ddN-EW-5JM"/>
+                        <outlet property="hSpaceLeft" destination="hW3-DJ-c77" id="8ui-Xk-5Ym"/>
+                        <outlet property="hSpaceRight" destination="QJC-kg-F73" id="O95-Yd-xXv"/>
+                        <outlet property="offLabel" destination="CV3-WA-ksz" id="tDd-bw-0s4"/>
                         <outlet property="tableView" destination="cYm-0F-dNV" id="FY6-He-JwG"/>
                         <outlet property="textField" destination="7gF-4p-Lic" id="bwz-tc-gYV"/>
                         <outlet property="titel" destination="fn0-d6-QoD" id="j5H-Sv-iHU"/>
+                        <outlet property="topSpace" destination="jSX-Ds-PX0" id="VHv-72-J2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xI9-Ge-efG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -800,5 +825,6 @@ your shown name in the Chat. You only need to set this name once. After this it 
         <image name="img_contacts_32x32.png" width="32" height="32"/>
         <image name="img_finder_32x32.png" width="32" height="32"/>
         <image name="img_gear_32x32.png" width="32" height="32"/>
+        <image name="img_user.png" width="128" height="128"/>
     </resources>
 </document>

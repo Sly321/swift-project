@@ -9,7 +9,7 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        aD.currentView = self
         //aD.data.insert("Contact", id: "54321", data: ["id": "54321", "name": "Gandalf"])
         //aD.data.insert("Contact", id: "2345234", data: ["id": "2345234", "name": "Monk"])
         //aD.data.insert("Contact", id: "fw45gw4", data: ["id": "fw45gw4", "name": "Qrid"])

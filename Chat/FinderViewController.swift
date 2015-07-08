@@ -12,10 +12,9 @@ class FinderViewController: UIViewController, MPCBrowserDelegate, UIScrollViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        aD.advertiser.view = self
+        aD.currentView = self
         aD.browser.delegate = self
         aD.browser.browser.startBrowsingForPeers()
-        println(aD.username)
         
         // add background image
         let image = UIImage(named:"dart")!
