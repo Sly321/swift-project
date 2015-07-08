@@ -767,7 +767,7 @@ your shown name in the Chat. You only need to set this name once.</string>
                                 <color key="separatorColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsCell" rowHeight="88" id="ePN-4e-Bcd" customClass="ContactsTableViewCell" customModule="Chat" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="contactsCell" rowHeight="88" id="ePN-4e-Bcd" customClass="ContactsTableViewCell" customModule="Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ePN-4e-Bcd" id="FK0-YM-N6a">
@@ -800,19 +800,19 @@ your shown name in the Chat. You only need to set this name once.</string>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="buddy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebD-kL-WDV">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="online" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-Db-6dG">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-SY-wsW">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="online" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-Db-6dG">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -831,11 +831,14 @@ your shown name in the Chat. You only need to set this name once.</string>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hXT-O8-eYE" secondAttribute="bottom" constant="8" id="RiL-ae-qMD">
                                                     <variation key="widthClass=compact" constant="5"/>
                                                 </constraint>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ebD-kL-WDV" secondAttribute="bottom" constant="5" id="Ych-m0-Qkc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ebD-kL-WDV" secondAttribute="bottom" constant="5" id="Ych-m0-Qkc">
+                                                    <variation key="widthClass=compact" constant="25"/>
+                                                </constraint>
                                                 <constraint firstItem="e8h-rU-zPE" firstAttribute="leading" secondItem="hXT-O8-eYE" secondAttribute="trailing" constant="8" id="a2i-lG-K9G">
                                                     <variation key="widthClass=compact" constant="15"/>
                                                 </constraint>
                                                 <constraint firstAttribute="centerY" secondItem="2qu-SY-wsW" secondAttribute="centerY" id="c3j-Lw-ucR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PGi-Db-6dG" secondAttribute="bottom" constant="5" id="gnC-1r-Bue"/>
                                                 <constraint firstItem="ebD-kL-WDV" firstAttribute="leading" secondItem="hXT-O8-eYE" secondAttribute="trailing" constant="10" id="scJ-fu-CEC">
                                                     <variation key="widthClass=compact" constant="15"/>
                                                 </constraint>
@@ -851,8 +854,8 @@ your shown name in the Chat. You only need to set this name once.</string>
                                                     <exclude reference="hXT-O8-eYE"/>
                                                     <exclude reference="e8h-rU-zPE"/>
                                                     <exclude reference="ebD-kL-WDV"/>
-                                                    <exclude reference="PGi-Db-6dG"/>
                                                     <exclude reference="2qu-SY-wsW"/>
+                                                    <exclude reference="PGi-Db-6dG"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="NmY-1b-rhq"/>
@@ -861,6 +864,7 @@ your shown name in the Chat. You only need to set this name once.</string>
                                                     <exclude reference="Cia-8V-eAh"/>
                                                     <exclude reference="a2i-lG-K9G"/>
                                                     <exclude reference="NlS-UT-bxm"/>
+                                                    <exclude reference="gnC-1r-Bue"/>
                                                     <exclude reference="unF-e7-6DO"/>
                                                     <exclude reference="Ych-m0-Qkc"/>
                                                     <exclude reference="scJ-fu-CEC"/>
@@ -873,8 +877,8 @@ your shown name in the Chat. You only need to set this name once.</string>
                                                     <include reference="hXT-O8-eYE"/>
                                                     <include reference="e8h-rU-zPE"/>
                                                     <include reference="ebD-kL-WDV"/>
-                                                    <include reference="PGi-Db-6dG"/>
                                                     <include reference="2qu-SY-wsW"/>
+                                                    <include reference="PGi-Db-6dG"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="NmY-1b-rhq"/>
@@ -883,7 +887,8 @@ your shown name in the Chat. You only need to set this name once.</string>
                                                     <include reference="Cia-8V-eAh"/>
                                                     <include reference="a2i-lG-K9G"/>
                                                     <include reference="NlS-UT-bxm"/>
-                                                    <include reference="unF-e7-6DO"/>
+                                                    <include reference="gnC-1r-Bue"/>
+                                                    <exclude reference="unF-e7-6DO"/>
                                                     <include reference="Ych-m0-Qkc"/>
                                                     <include reference="scJ-fu-CEC"/>
                                                     <include reference="P5y-Aw-IKL"/>
@@ -892,8 +897,10 @@ your shown name in the Chat. You only need to set this name once.</string>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="buddy" destination="ebD-kL-WDV" id="0vD-Pj-YzX"/>
                                             <outlet property="img" destination="hXT-O8-eYE" id="VR1-HE-Yd3"/>
                                             <outlet property="name" destination="e8h-rU-zPE" id="SVT-LJ-8tQ"/>
+                                            <outlet property="online" destination="PGi-Db-6dG" id="aPu-JT-qXP"/>
                                             <segue destination="5zD-5N-Xal" kind="show" id="VZe-Sb-sDf"/>
                                         </connections>
                                     </tableViewCell>

@@ -17,7 +17,6 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         aD.currentView = self
         con = aD.contacts
-        println(aD.contacts.count)
         // Do any additional setup after loading the view.
     }
 
@@ -48,7 +47,23 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("contactsCell") as! ContactsTableViewCell
         
         cell.name.text = con[indexPath.item]["name"]?.description
-        //cell.datum.text = aD.dateFormatter.stringFromDate(con[indexPath.item]["date"] as! NSDate)
+        
+        if (con[indexPath.item]["is_friend"] as! Bool) {
+            cell.buddy.text = "buddy"
+        
+        } else {
+            cell.buddy.text = "contact"
+        }
+        
+        let user = [aD.session.getPeerById(con[indexPath.item]["id"] as! String)]
+        
+        if (user[0] != nil) {
+            cell.online.textColor = UIColor(red: 0.0, green: 0.8, blue: 0.3, alpha: 0.5)
+            cell.online.text = "online"
+            
+        } else {
+            cell.online.text = "offline"
+        }
         
         return cell
     }

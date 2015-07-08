@@ -6,7 +6,7 @@
         <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="interests" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="is_friend" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="is_friend" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -27,7 +27,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contact" positionX="-819" positionY="-99" width="128" height="163"/>
+        <element name="Contact" positionX="-819" positionY="-99" width="128" height="165"/>
         <element name="Message" positionX="-650" positionY="-99" width="128" height="118"/>
         <element name="User" positionX="-990" positionY="-99" width="128" height="148"/>
     </elements>

@@ -12,6 +12,8 @@ class ContactsTableViewCell: UITableViewCell {
 
     @IBOutlet var name: UILabel!
     @IBOutlet var img: UIImageView!
+    @IBOutlet var buddy: UILabel!
+    @IBOutlet var online: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
