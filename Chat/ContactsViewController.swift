@@ -17,7 +17,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         aD.currentView = self
         con = aD.contacts
-        
+        println(aD.contacts.count)
         // Do any additional setup after loading the view.
     }
 
@@ -38,7 +38,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     //  Liefert vertikale Anzahl der Zellen.
     //
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return aD.contacts.count
+        return con.count
     }
     
     

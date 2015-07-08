@@ -55,6 +55,6 @@ class AuthenticationViewController: UIViewController {
         aD.session = MPCSession()
         aD.browser = MPCBrowser()
         aD.advertiser = MPCAdvertiser()
-        aD.contacts = Array<Dictionary<String, AnyObject>>()
+        aD.contacts = aD.data.get("Contact", predicat: nil)
     }
 }

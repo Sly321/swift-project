@@ -761,11 +761,13 @@ your shown name in the Chat. You only need to set this name once.</string>
                     <view key="view" contentMode="scaleToFill" id="CAT-0z-XW1">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="w4z-PF-2Wu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="w4z-PF-2Wu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsCell" rowHeight="87" id="ePN-4e-Bcd" customClass="ContactsTableViewCell" customModule="Chat" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsCell" rowHeight="88" id="ePN-4e-Bcd" customClass="ContactsTableViewCell" customModule="Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ePN-4e-Bcd" id="FK0-YM-N6a">
@@ -774,30 +776,118 @@ your shown name in the Chat. You only need to set this name once.</string>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXT-O8-eYE">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="8" width="81" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="81" id="39e-2K-NgS">
+                                                            <variation key="widthClass=compact" constant="73"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="39e-2K-NgS"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="39e-2K-NgS"/>
+                                                        </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8h-rU-zPE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8h-rU-zPE">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="107" y="8" width="42" height="21"/>
-                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="buddy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebD-kL-WDV">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="online" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-Db-6dG">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-SY-wsW">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="e8h-rU-zPE" firstAttribute="top" secondItem="FK0-YM-N6a" secondAttribute="topMargin" constant="8" id="Cia-8V-eAh">
+                                                    <variation key="widthClass=compact" constant="8"/>
+                                                </constraint>
+                                                <constraint firstItem="PGi-Db-6dG" firstAttribute="leading" secondItem="hXT-O8-eYE" secondAttribute="trailing" constant="9" id="NlS-UT-bxm">
+                                                    <variation key="widthClass=compact" constant="15"/>
+                                                </constraint>
+                                                <constraint firstItem="hXT-O8-eYE" firstAttribute="top" secondItem="FK0-YM-N6a" secondAttribute="topMargin" id="NmY-1b-rhq">
+                                                    <variation key="widthClass=compact" constant="8"/>
+                                                </constraint>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2qu-SY-wsW" secondAttribute="trailing" id="P5y-Aw-IKL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hXT-O8-eYE" secondAttribute="bottom" constant="8" id="RiL-ae-qMD">
+                                                    <variation key="widthClass=compact" constant="5"/>
+                                                </constraint>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ebD-kL-WDV" secondAttribute="bottom" constant="5" id="Ych-m0-Qkc"/>
+                                                <constraint firstItem="e8h-rU-zPE" firstAttribute="leading" secondItem="hXT-O8-eYE" secondAttribute="trailing" constant="8" id="a2i-lG-K9G">
+                                                    <variation key="widthClass=compact" constant="15"/>
+                                                </constraint>
+                                                <constraint firstAttribute="centerY" secondItem="2qu-SY-wsW" secondAttribute="centerY" id="c3j-Lw-ucR"/>
+                                                <constraint firstItem="ebD-kL-WDV" firstAttribute="leading" secondItem="hXT-O8-eYE" secondAttribute="trailing" constant="10" id="scJ-fu-CEC">
+                                                    <variation key="widthClass=compact" constant="15"/>
+                                                </constraint>
+                                                <constraint firstItem="hXT-O8-eYE" firstAttribute="leading" secondItem="FK0-YM-N6a" secondAttribute="leadingMargin" constant="8" id="udq-pY-tFe">
+                                                    <variation key="widthClass=compact" constant="2"/>
+                                                </constraint>
+                                                <constraint firstItem="PGi-Db-6dG" firstAttribute="top" secondItem="FK0-YM-N6a" secondAttribute="topMargin" constant="26" id="unF-e7-6DO">
+                                                    <variation key="widthClass=compact" constant="30"/>
+                                                </constraint>
+                                            </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="hXT-O8-eYE"/>
                                                     <exclude reference="e8h-rU-zPE"/>
+                                                    <exclude reference="ebD-kL-WDV"/>
+                                                    <exclude reference="PGi-Db-6dG"/>
+                                                    <exclude reference="2qu-SY-wsW"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="NmY-1b-rhq"/>
+                                                    <exclude reference="RiL-ae-qMD"/>
+                                                    <exclude reference="udq-pY-tFe"/>
+                                                    <exclude reference="Cia-8V-eAh"/>
+                                                    <exclude reference="a2i-lG-K9G"/>
+                                                    <exclude reference="NlS-UT-bxm"/>
+                                                    <exclude reference="unF-e7-6DO"/>
+                                                    <exclude reference="Ych-m0-Qkc"/>
+                                                    <exclude reference="scJ-fu-CEC"/>
+                                                    <exclude reference="P5y-Aw-IKL"/>
+                                                    <exclude reference="c3j-Lw-ucR"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="hXT-O8-eYE"/>
                                                     <include reference="e8h-rU-zPE"/>
+                                                    <include reference="ebD-kL-WDV"/>
+                                                    <include reference="PGi-Db-6dG"/>
+                                                    <include reference="2qu-SY-wsW"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="NmY-1b-rhq"/>
+                                                    <include reference="RiL-ae-qMD"/>
+                                                    <include reference="udq-pY-tFe"/>
+                                                    <include reference="Cia-8V-eAh"/>
+                                                    <include reference="a2i-lG-K9G"/>
+                                                    <include reference="NlS-UT-bxm"/>
+                                                    <include reference="unF-e7-6DO"/>
+                                                    <include reference="Ych-m0-Qkc"/>
+                                                    <include reference="scJ-fu-CEC"/>
+                                                    <include reference="P5y-Aw-IKL"/>
+                                                    <include reference="c3j-Lw-ucR"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -808,9 +898,6 @@ your shown name in the Chat. You only need to set this name once.</string>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vkG-kG-Ybw" id="QUP-8X-xUN"/>
                                     <outlet property="delegate" destination="vkG-kG-Ybw" id="yti-pV-SSi"/>
@@ -818,14 +905,41 @@ your shown name in the Chat. You only need to set this name once.</string>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w4z-PF-2Wu" firstAttribute="top" secondItem="CAT-0z-XW1" secondAttribute="topMargin" id="0Pe-mV-fD3"/>
+                            <constraint firstItem="w4z-PF-2Wu" firstAttribute="top" secondItem="CAT-0z-XW1" secondAttribute="topMargin" id="7pQ-SZ-Tib"/>
+                            <constraint firstItem="w4z-PF-2Wu" firstAttribute="bottom" secondItem="CAT-0z-XW1" secondAttribute="bottomMargin" id="9tT-vC-d45"/>
+                            <constraint firstItem="w4z-PF-2Wu" firstAttribute="bottom" secondItem="CAT-0z-XW1" secondAttribute="bottomMargin" id="CWT-3C-RkW"/>
+                            <constraint firstItem="w4z-PF-2Wu" firstAttribute="leading" secondItem="CAT-0z-XW1" secondAttribute="leadingMargin" constant="-16" id="Pq6-40-hrM"/>
+                            <constraint firstAttribute="centerX" secondItem="w4z-PF-2Wu" secondAttribute="centerX" id="Xlk-Ys-nqI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w4z-PF-2Wu" secondAttribute="trailing" constant="-16" id="k7B-cH-nvb"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="w4z-PF-2Wu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Pe-mV-fD3"/>
+                                <exclude reference="7pQ-SZ-Tib"/>
+                                <exclude reference="9tT-vC-d45"/>
+                                <exclude reference="CWT-3C-RkW"/>
+                                <exclude reference="Pq6-40-hrM"/>
+                                <exclude reference="Xlk-Ys-nqI"/>
+                                <exclude reference="k7B-cH-nvb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="w4z-PF-2Wu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Pe-mV-fD3"/>
+                                <include reference="7pQ-SZ-Tib"/>
+                                <include reference="9tT-vC-d45"/>
+                                <include reference="CWT-3C-RkW"/>
+                                <include reference="Pq6-40-hrM"/>
+                                <include reference="Xlk-Ys-nqI"/>
+                                <include reference="k7B-cH-nvb"/>
                             </mask>
                         </variation>
                     </view>
