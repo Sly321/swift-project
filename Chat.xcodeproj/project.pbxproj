@@ -18,6 +18,8 @@
 		FB4E6AEB1B3730A800460529 /* MPCBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E6AEA1B3730A800460529 /* MPCBrowser.swift */; };
 		FB4E6AED1B37341200460529 /* MPCAdvertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E6AEC1B37341200460529 /* MPCAdvertiser.swift */; };
 		FB51E6D21B4CCF6900F98242 /* img_user.png in Resources */ = {isa = PBXBuildFile; fileRef = FB51E6D11B4CCF6900F98242 /* img_user.png */; };
+		FB51E6D41B4CE2D100F98242 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51E6D31B4CE2D100F98242 /* ContactsTableViewCell.swift */; };
+		FB51E6D61B4CE47B00F98242 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51E6D51B4CE47B00F98242 /* ContactsViewController.swift */; };
 		FB5600FA1B3265E600A68C08 /* ChatsCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5600F91B3265E600A68C08 /* ChatsCellCollectionViewCell.swift */; };
 		FB5D46C01B387B1500BC2057 /* ConversationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D46BF1B387B1500BC2057 /* ConversationCellTableViewCell.swift */; };
 		FB5D46C21B3891D400BC2057 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D46C11B3891D400BC2057 /* ConversationViewController.swift */; };
@@ -34,7 +36,6 @@
 		FBF5D0371B2F6BA80066C29A /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5D0361B2F6BA80066C29A /* AuthenticationViewController.swift */; };
 		FBF5D0391B2F6BCF0066C29A /* FinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5D0381B2F6BCF0066C29A /* FinderViewController.swift */; };
 		FBF5D03B1B2F6BED0066C29A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5D03A1B2F6BED0066C29A /* SettingsViewController.swift */; };
-		FBF5D03D1B2F6C200066C29A /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5D03C1B2F6C200066C29A /* ContactsTableViewController.swift */; };
 		FBF5D03F1B2F6C4E0066C29A /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5D03E1B2F6C4E0066C29A /* ContactViewController.swift */; };
 		FBF5D0411B2F6C7D0066C29A /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5D0401B2F6C7D0066C29A /* ChatsViewController.swift */; };
 		FBF5D0491B2F7B730066C29A /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5D0481B2F7B730066C29A /* CoreData.swift */; };
@@ -62,6 +63,8 @@
 		FB4E6AEA1B3730A800460529 /* MPCBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCBrowser.swift; sourceTree = "<group>"; };
 		FB4E6AEC1B37341200460529 /* MPCAdvertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCAdvertiser.swift; sourceTree = "<group>"; };
 		FB51E6D11B4CCF6900F98242 /* img_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_user.png; sourceTree = "<group>"; };
+		FB51E6D31B4CE2D100F98242 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		FB51E6D51B4CE47B00F98242 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		FB5600F91B3265E600A68C08 /* ChatsCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		FB5D46BF1B387B1500BC2057 /* ConversationCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellTableViewCell.swift; sourceTree = "<group>"; };
 		FB5D46C11B3891D400BC2057 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		FBF5D0361B2F6BA80066C29A /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		FBF5D0381B2F6BCF0066C29A /* FinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderViewController.swift; sourceTree = "<group>"; };
 		FBF5D03A1B2F6BED0066C29A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		FBF5D03C1B2F6C200066C29A /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		FBF5D03E1B2F6C4E0066C29A /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		FBF5D0401B2F6C7D0066C29A /* ChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		FBF5D0481B2F7B730066C29A /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
@@ -155,7 +157,8 @@
 				FBF5D0481B2F7B730066C29A /* CoreData.swift */,
 				FBF5D0401B2F6C7D0066C29A /* ChatsViewController.swift */,
 				FBF5D03E1B2F6C4E0066C29A /* ContactViewController.swift */,
-				FBF5D03C1B2F6C200066C29A /* ContactsTableViewController.swift */,
+				FB51E6D51B4CE47B00F98242 /* ContactsViewController.swift */,
+				FB51E6D31B4CE2D100F98242 /* ContactsTableViewCell.swift */,
 				FBF5D03A1B2F6BED0066C29A /* SettingsViewController.swift */,
 				FBF5D0381B2F6BCF0066C29A /* FinderViewController.swift */,
 				FBF5D0361B2F6BA80066C29A /* AuthenticationViewController.swift */,
@@ -303,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBF5D03D1B2F6C200066C29A /* ContactsTableViewController.swift in Sources */,
 				FB5D46C21B3891D400BC2057 /* ConversationViewController.swift in Sources */,
 				FB4E6AE91B36E89800460529 /* MPCSession.swift in Sources */,
 				FB5D46C01B387B1500BC2057 /* ConversationCellTableViewCell.swift in Sources */,
@@ -313,8 +315,10 @@
 				FB70D7D01B3B26ED0086FF0E /* User.swift in Sources */,
 				FB4E6AED1B37341200460529 /* MPCAdvertiser.swift in Sources */,
 				FB4E6AEB1B3730A800460529 /* MPCBrowser.swift in Sources */,
+				FB51E6D61B4CE47B00F98242 /* ContactsViewController.swift in Sources */,
 				FBF5D0371B2F6BA80066C29A /* AuthenticationViewController.swift in Sources */,
 				FB70D7CC1B3B26ED0086FF0E /* Contact.swift in Sources */,
+				FB51E6D41B4CE2D100F98242 /* ContactsTableViewCell.swift in Sources */,
 				FBF5D0391B2F6BCF0066C29A /* FinderViewController.swift in Sources */,
 				FBF5D03F1B2F6C4E0066C29A /* ContactViewController.swift in Sources */,
 				FBF5D00E1B2F5DB20066C29A /* AppDelegate.swift in Sources */,

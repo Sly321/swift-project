@@ -542,42 +542,12 @@ your shown name in the Chat. You only need to set this name once.</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="0K6-pb-hQZ" kind="relationship" relationship="rootViewController" id="k0P-71-BQe"/>
+                        <segue destination="vkG-kG-Ybw" kind="relationship" relationship="rootViewController" id="1rC-rb-UR6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aia-ou-KrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1732.5" y="1097"/>
-        </scene>
-        <!--Contacts-->
-        <scene sceneID="cHp-hH-7Is">
-            <objects>
-                <tableViewController title="Contacts" id="0K6-pb-hQZ" customClass="ContactsTableViewController" customModule="Chat" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tAD-Iq-HaA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsCell" id="pR9-O1-l5v">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pR9-O1-l5v" id="fSU-hT-u6C">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="5zD-5N-Xal" kind="show" identifier="Contact" id="dNS-67-olJ"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="0K6-pb-hQZ" id="qzz-Av-MH5"/>
-                            <outlet property="delegate" destination="0K6-pb-hQZ" id="QND-tq-ZmC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="x5n-fV-962"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fAC-Je-ygc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1732.5" y="1832"/>
         </scene>
         <!--Conversation-->
         <scene sceneID="V8w-wS-GGc">
@@ -779,6 +749,91 @@ your shown name in the Chat. You only need to set this name once.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xI9-Ge-efG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="891" y="1832"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="tMf-GV-4f3">
+            <objects>
+                <viewController title="Contacts" id="vkG-kG-Ybw" customClass="ContactsViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fC2-27-U4d"/>
+                        <viewControllerLayoutGuide type="bottom" id="r41-XL-Oji"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CAT-0z-XW1">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="w4z-PF-2Wu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsCell" rowHeight="87" id="ePN-4e-Bcd" customClass="ContactsTableViewCell" customModule="Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ePN-4e-Bcd" id="FK0-YM-N6a">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXT-O8-eYE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="8" width="81" height="70"/>
+                                                    </variation>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8h-rU-zPE">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="107" y="8" width="42" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="hXT-O8-eYE"/>
+                                                    <exclude reference="e8h-rU-zPE"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="hXT-O8-eYE"/>
+                                                    <include reference="e8h-rU-zPE"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="hXT-O8-eYE" id="VR1-HE-Yd3"/>
+                                            <outlet property="name" destination="e8h-rU-zPE" id="SVT-LJ-8tQ"/>
+                                            <segue destination="5zD-5N-Xal" kind="show" id="VZe-Sb-sDf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vkG-kG-Ybw" id="QUP-8X-xUN"/>
+                                    <outlet property="delegate" destination="vkG-kG-Ybw" id="yti-pV-SSi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="w4z-PF-2Wu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="w4z-PF-2Wu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="1vN-Um-p5c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Zj-hh-HnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732.5" y="1832"/>
         </scene>
         <!--Contact-->
         <scene sceneID="ibp-rX-VVJ">
