@@ -48,11 +48,12 @@ class CoreData: NSObject {
                     }
                     
                     // TO_DO String in Datum umwandeln und Datum übergeben an CoreData
-                    /*
+                    
                     if((data[0].valueForKey("age")) != nil){
+                        NSLog("SAVE DATA: Age")
                         fetchedData.setValue(data[0].valueForKey("age"), forKey: "age")
                     }
-                    */
+                    
                     if((data[0].valueForKey("gender")) != nil){
                         fetchedData.setValue(data[0].valueForKey("gender"), forKey: "gender")
                     }

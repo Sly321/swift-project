@@ -9,30 +9,41 @@
 import UIKit
 
 
-class SettingsViewController: UIViewController, UITextFieldDelegate {
+class SettingsViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var usernameText: UITextField!
-    @IBOutlet weak var ageText: UITextField!
+    @IBOutlet weak var ageDayText: UITextField!
+    @IBOutlet weak var ageMonthText: UITextField!
+    @IBOutlet weak var ageYearText: UITextField!
     @IBOutlet weak var genderText: UITextField!
     @IBOutlet weak var moodText: UITextField!
     @IBOutlet weak var interestsText: UITextField!
-    @IBOutlet weak var aboutmeText: UITextField!
     let aD = UIApplication.sharedApplication().delegate as! AppDelegate
     var userdata: [Dictionary<String, AnyObject>]?
-    @IBOutlet var textFieldsCollection: [UITextField]! = nil
+    
+    @IBOutlet var textFieldsCollection: [UITextField]!
+    @IBOutlet weak var aboutmeText: UITextView!
+    let dateFormatter = NSDateFormatter();
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        aD.currentView = self
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        //Anpassen vom TextView-Rand
+        aboutmeText.layer.borderWidth = 1.0
+        aboutmeText.layer.cornerRadius = 5.0
+        aboutmeText.layer.borderColor = UIColor(red: 0.875, green: 0.875, blue: 0.875, alpha: 1.0).CGColor
+        
+        
         for textfield in textFieldsCollection{
                 textfield.delegate = self
         }
-       // NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeConstraints:", name: UIKeyboardWillShowNotification, object: nil)
-       // NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeConstraints:", name: UIKeyboardWillHideNotification, object: nil)
+        aboutmeText.delegate = self
         
         userdata = aD.data.get("User", predicat: nil)
         userDataToTextField(userdata!)
@@ -40,11 +51,12 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         NSLog("userData: ")
         NSLog("%@", userdata![0]["name"] as! String)
         //NSLog("%@", userdata![0]["age"] as! String)
+        /*
         NSLog("%@", userdata![0]["gender"] as! String)
         NSLog("%@", userdata![0]["mood"] as! String)
         NSLog("%@", userdata![0]["interests"] as! String)
         NSLog("%@", userdata![0]["about_me"] as! String)
-        
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,6 +77,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             textfield.resignFirstResponder()
             self.view.endEditing(true)
         }
+        aboutmeText.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     /*
@@ -85,6 +99,14 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     func userDataToTextField(data: AnyObject){
         
+        if(userdata![0]["age"] != nil){
+        //TO_DO - Daten aus Core Umwandeln zu String
+        //var date = dateFormatter.stringFromDate(userdata![0]["age"])
+        }
+        else{
+            NSLog("date ist nil")
+        }
+        
         if(data[0].valueForKey("name") != nil && data[0].valueForKey("name") as! String != String("")){
             NSLog("Username: %@", data[0].valueForKey("name") as! String)
             usernameText.text = data[0].valueForKey("name") as! String
@@ -96,12 +118,30 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         
         
         if(data[0].valueForKey("age") != nil && data[0].valueForKey("age") as! String != String("")){
-            ageText.text = data[0].valueForKey("age") as! String
+            ageDayText.text = data[0].valueForKey("age") as! String
             NSLog("Alter-IF")
         }
         else{
-            ageText.textColor = UIColor.lightGrayColor()
-            ageText.text = "Wann hast Geburtsdatum?"
+            ageDayText.textColor = UIColor.lightGrayColor()
+            ageDayText.text = "TT"
+        }
+        
+        if(data[0].valueForKey("age") != nil && data[0].valueForKey("age") as! String != String("")){
+            ageMonthText.text = data[0].valueForKey("age") as! String
+            NSLog("Alter-IF")
+        }
+        else{
+            ageMonthText.textColor = UIColor.lightGrayColor()
+            ageMonthText.text = "MM"
+        }
+        
+        if(data[0].valueForKey("age") != nil && data[0].valueForKey("age") as! String != String("")){
+            ageYearText.text = data[0].valueForKey("age") as! String
+            NSLog("Alter-IF")
+        }
+        else{
+            ageYearText.textColor = UIColor.lightGrayColor()
+            ageYearText.text = "JJJJ"
         }
         
         if(data[0].valueForKey("gender") != nil && data[0].valueForKey("gender") as! String != String("")){
@@ -146,6 +186,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveSettings(sender: AnyObject) {
         
+        dateFormatter.dateFormat = "yyyymmdd"
+        
         if(usernameText != String("")){
                 userdata![0]["name"] = usernameText.text
         }
@@ -154,9 +196,13 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             userdata![0]["mood"] = moodText.text
         }
         
-        if(ageText != String("") && ageText != String("Wann hast Geburtsdatum?")){
-            userdata![0]["age"] = ageText.text
+        
+        if(ageDayText != String("") && ageMonthText != String("") && ageYearText != String("") && ageDayText != String("TT") && ageMonthText != String("MM") && ageYearText != String("JJJJ")){
+            
+            var date = dateFormatter.dateFromString(ageYearText.text + "-" + ageMonthText.text + "-" + ageDayText.text)
+            userdata![0]["age"] = date
         }
+        
         
         if(genderText != String("") && genderText != String("Mann oder Frau?")){
             userdata![0]["gender"] = genderText.text
@@ -189,11 +235,36 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func ClearTextfieldAgeDay(sender: AnyObject) {
+            if(textboxCheck(userdata!, property: "age")){
+                ageDayText.textColor = UIColor.blackColor()
+                ageDayText.text = ""
+            }
+    }
+
+    @IBAction func TextfieldAgeChange(sender: AnyObject) {
+        maxLengthCheck(ageDayText, maxLength: 2)
+    }
     
-    @IBAction func ClearTextFieldAge(sender: AnyObject) {
+    @IBAction func TexfieldMonthChange(sender: AnyObject) {
+        maxLengthCheck(ageMonthText, maxLength: 2)
+        
+    }
+    
+    @IBAction func TextfieldYearChange(sender: AnyObject) {
+        maxLengthCheck(ageYearText, maxLength: 4)
+    }
+    
+    @IBAction func ClearTextfieldAgeMonth(sender: AnyObject) {
         if(textboxCheck(userdata!, property: "age")){
-            ageText.textColor = UIColor.blackColor()
-            ageText.text = ""
+            ageMonthText.textColor = UIColor.blackColor()
+            ageMonthText.text = ""
+        }
+    }
+    @IBAction func ClearTextfieldAgeYear(sender: AnyObject) {
+        if(textboxCheck(userdata!, property: "age")){
+            ageYearText.textColor = UIColor.blackColor()
+            ageYearText.text = ""
         }
     }
     
@@ -218,10 +289,17 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func ClearTextFieldAboutme(sender: AnyObject) {
+    
+    func textViewDidBeginEditing(textView: UITextView) {
         if(textboxCheck(userdata!, property: "about_me")){
             aboutmeText.textColor = UIColor.blackColor()
             aboutmeText.text = ""
+        }
+    }
+    
+    func maxLengthCheck(textField: UITextField!, maxLength: Int){
+        if(count(textField.text!) > maxLength){
+            textField.deleteBackward()
         }
     }
     
