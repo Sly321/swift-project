@@ -242,6 +242,7 @@
 		FBF5D0001B2F5DB20066C29A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = zerg;
 				TargetAttributes = {

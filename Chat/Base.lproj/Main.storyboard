@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -82,7 +82,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-I4-eM5">
-                                <rect key="frame" x="241" y="112" width="118" height="34"/>
+                                <rect key="frame" x="241" y="112" width="118" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TLj-mI-c90">
                                         <variation key="widthClass=compact" constant="40"/>
@@ -104,6 +104,12 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     </mask>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPQ-Da-Oh9">
+                                <rect key="frame" x="74" y="121" width="234" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.020100812986998839" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -142,8 +148,10 @@ your shown name in the Chat. You only need to set this name once. After this it 
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="InfoLabel" destination="uAD-ei-l4k" id="dpR-uu-6GS"/>
+                        <outlet property="UserLabel" destination="2cD-Ms-ctS" id="IuQ-Wa-BQv"/>
                         <outlet property="btn" destination="EYC-zh-MZP" id="A4a-u9-mc8"/>
-                        <outlet property="infoText" destination="2cD-Ms-ctS" id="3f5-DK-nrB"/>
+                        <outlet property="infoText" destination="QPQ-Da-Oh9" id="nLd-OI-KSe"/>
                         <outlet property="textField" destination="uUQ-I4-eM5" id="JyE-He-7hY"/>
                         <segue destination="iqr-YK-grR" kind="show" identifier="authintication" id="tm4-r7-BJG"/>
                     </connections>
@@ -208,7 +216,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chatsCell" id="PNC-5G-sEj" customClass="ChatsCellCollectionViewCell" customModule="Chat">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="175" height="134"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="175" height="134"/>
@@ -310,7 +318,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF0-FP-Irw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF0-FP-Irw">
                                 <rect key="frame" x="1" y="71" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -322,7 +330,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <rect key="frame" x="13" y="29" width="79" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Geburtsdatum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuH-2F-rLQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Geburtsdatum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuH-2F-rLQ">
                                 <rect key="frame" x="1" y="109" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -331,7 +339,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <rect key="frame" x="13" y="67" width="111" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Geschlecht" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-Wy-K2L">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Geschlecht" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-Wy-K2L">
                                 <rect key="frame" x="1" y="147" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -343,7 +351,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <rect key="frame" x="13" y="105" width="87" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stimmung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU3-z7-QQu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Stimmung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU3-z7-QQu">
                                 <rect key="frame" x="1" y="185" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -355,7 +363,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <rect key="frame" x="13" y="143" width="79" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interessen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-pz-b3L">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Interessen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-pz-b3L">
                                 <rect key="frame" x="1" y="223" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -367,7 +375,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <rect key="frame" x="13" y="181" width="80" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Über mich" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-QE-UVS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Über mich" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-QE-UVS">
                                 <rect key="frame" x="0.0" y="261" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -379,7 +387,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <rect key="frame" x="12" y="219" width="80" height="21"/>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYf-g1-PaR">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYf-g1-PaR">
                                 <rect key="frame" x="137" y="252" width="250" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -402,7 +410,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     </mask>
                                 </variation>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cco-mc-5vB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cco-mc-5vB">
                                 <rect key="frame" x="137" y="100" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Kh-8v-tO7"/>
@@ -430,7 +438,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <action selector="TextfieldAgeChange:" destination="94r-9a-vb2" eventType="editingChanged" id="FCv-ik-GSb"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVx-Pp-6ry">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVx-Pp-6ry">
                                 <rect key="frame" x="137" y="100" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9SR-e0-jg0"/>
@@ -458,7 +466,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <action selector="TexfieldMonthChange:" destination="94r-9a-vb2" eventType="editingChanged" id="yFb-di-YYg"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWR-Iv-BQc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWR-Iv-BQc">
                                 <rect key="frame" x="137" y="214" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="8VQ-jg-3PQ"/>
@@ -485,7 +493,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <action selector="ClearTextFieldInterests:" destination="94r-9a-vb2" eventType="editingDidBegin" id="uoW-S4-n2U"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VX4-ed-10F">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VX4-ed-10F">
                                 <rect key="frame" x="137" y="138" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="BvX-OU-vAj"/>
@@ -512,7 +520,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <action selector="ClearTextFieldGender:" destination="94r-9a-vb2" eventType="editingDidBegin" id="mHZ-be-hjn"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beE-Gr-v8e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beE-Gr-v8e">
                                 <rect key="frame" x="137" y="176" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="AIQ-X1-r1p"/>
@@ -539,7 +547,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <action selector="ClearTextFieldMood:" destination="94r-9a-vb2" eventType="editingDidBegin" id="xxS-mi-aTH"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NsS-XG-EQt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NsS-XG-EQt">
                                 <rect key="frame" x="137" y="62" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Voz-QE-730"/>
@@ -567,7 +575,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <outlet property="delegate" destination="94r-9a-vb2" id="zWu-6g-03z"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ax-kg-S4z">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ax-kg-S4z">
                                 <rect key="frame" x="167" y="408" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="EZ9-IP-zcs"/>
@@ -592,7 +600,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                     <action selector="saveSettings:" destination="94r-9a-vb2" eventType="touchUpInside" id="aNi-FN-my9"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2w3-WE-mzS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2w3-WE-mzS">
                                 <rect key="frame" x="137" y="100" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="kE4-2o-nO3"/>
@@ -660,28 +668,28 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                 <exclude reference="2w3-WE-mzS"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IaT-1l-yLX"/>
+                                <exclude reference="LnV-ao-UmN"/>
+                                <exclude reference="16k-4I-bQ2"/>
+                                <exclude reference="L0u-tH-gbd"/>
                                 <exclude reference="KI5-xU-jZ9"/>
                                 <exclude reference="ksY-YT-0ns"/>
                                 <exclude reference="QcL-bZ-b9n"/>
                                 <exclude reference="dgr-MX-hd1"/>
-                                <exclude reference="TEm-6T-uir"/>
-                                <exclude reference="UVg-rO-6Vx"/>
                                 <exclude reference="qfz-Qd-iZe"/>
                                 <exclude reference="ylQ-Vv-Jqx"/>
+                                <exclude reference="TEm-6T-uir"/>
+                                <exclude reference="UVg-rO-6Vx"/>
                                 <exclude reference="Nya-7D-lGe"/>
                                 <exclude reference="nXS-2m-l8o"/>
                                 <exclude reference="abv-op-mg5"/>
                                 <exclude reference="bbx-lb-SZy"/>
                                 <exclude reference="89p-WK-0ZQ"/>
                                 <exclude reference="x02-lU-N0f"/>
-                                <exclude reference="16k-4I-bQ2"/>
-                                <exclude reference="L0u-tH-gbd"/>
-                                <exclude reference="HND-W0-RyR"/>
-                                <exclude reference="bWF-ng-H5k"/>
                                 <exclude reference="GKW-gv-Xkh"/>
                                 <exclude reference="kKU-3N-3xA"/>
-                                <exclude reference="IaT-1l-yLX"/>
-                                <exclude reference="LnV-ao-UmN"/>
+                                <exclude reference="HND-W0-RyR"/>
+                                <exclude reference="bWF-ng-H5k"/>
                                 <exclude reference="C4E-vc-2No"/>
                                 <exclude reference="tZK-5h-VId"/>
                                 <exclude reference="8h2-26-pOT"/>
@@ -698,28 +706,28 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                 <include reference="2w3-WE-mzS"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IaT-1l-yLX"/>
+                                <include reference="LnV-ao-UmN"/>
+                                <include reference="16k-4I-bQ2"/>
+                                <include reference="L0u-tH-gbd"/>
                                 <include reference="KI5-xU-jZ9"/>
                                 <include reference="ksY-YT-0ns"/>
                                 <include reference="QcL-bZ-b9n"/>
                                 <include reference="dgr-MX-hd1"/>
-                                <include reference="TEm-6T-uir"/>
-                                <include reference="UVg-rO-6Vx"/>
                                 <include reference="qfz-Qd-iZe"/>
                                 <include reference="ylQ-Vv-Jqx"/>
+                                <include reference="TEm-6T-uir"/>
+                                <include reference="UVg-rO-6Vx"/>
                                 <include reference="Nya-7D-lGe"/>
                                 <include reference="nXS-2m-l8o"/>
                                 <include reference="abv-op-mg5"/>
                                 <include reference="bbx-lb-SZy"/>
                                 <include reference="89p-WK-0ZQ"/>
                                 <include reference="x02-lU-N0f"/>
-                                <include reference="16k-4I-bQ2"/>
-                                <include reference="L0u-tH-gbd"/>
-                                <include reference="HND-W0-RyR"/>
-                                <include reference="bWF-ng-H5k"/>
                                 <include reference="GKW-gv-Xkh"/>
                                 <include reference="kKU-3N-3xA"/>
-                                <include reference="IaT-1l-yLX"/>
-                                <include reference="LnV-ao-UmN"/>
+                                <include reference="HND-W0-RyR"/>
+                                <include reference="bWF-ng-H5k"/>
                                 <include reference="C4E-vc-2No"/>
                                 <include reference="tZK-5h-VId"/>
                                 <include reference="8h2-26-pOT"/>
@@ -781,8 +789,10 @@ your shown name in the Chat. You only need to set this name once. After this it 
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsCell" id="pR9-O1-l5v">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pR9-O1-l5v" id="fSU-hT-u6C">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -831,6 +841,7 @@ your shown name in the Chat. You only need to set this name once. After this it 
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ByY-B9-2AW" id="65N-UU-mrP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0U-AV-keX">
